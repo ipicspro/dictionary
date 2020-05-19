@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import dictionary
+from . import check_in_dict

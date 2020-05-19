@@ -651,3 +651,5 @@ class check_in_dict():
         res = res[:-1]
         if shorten: res = '[\n](' + res.replace('|',' )|[\n](') + ' )'
         return res
+
+check_in_dict = check_in_dict
