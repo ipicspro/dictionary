@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import check_in_dict
+from . import dictionary
+
+check_in_dict = dictionary.check_in_dict
