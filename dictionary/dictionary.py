@@ -34,6 +34,23 @@ class check_in_dict():
             4: 'dinner',
             5: 'set lunch',
         }
+        self.weekdays_full = {
+            '0_en': ['monday'],
+            '1_en': ['tuesday'],
+            '2_en': ['wednesday'],
+            '3_en': ['thursday'],
+            '4_en': ['friday'],
+            '5_en': ['saturday'],
+            '6_en': ['sunday'],
+            
+            '0_fi': ['maanantai', 'manantai'],
+            '1_fi': ['tiistai', 'tistai'],
+            '2_fi': ['keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko'],
+            '3_fi': ['torstai'],
+            '4_fi': ['perjantai'],
+            '5_fi': ['lauantai'],
+            '6_fi': ['sunnuntai', 'sununtai'],
+        }
         self.weekdays = {
             '0_en': ['monday', 'mon', 'mo'],
             '1_en': ['tuesday', 'tue', 'tu'],
@@ -59,13 +76,14 @@ class check_in_dict():
         }
 
         # use this in duplicated cases in 'words' (for different languages are same values)
-        price_mark = ['€', 'eur', 'euro', '$', 'usd', 'dollar', '£', 'gbp', 'pound', 'price', 'hinta']
-        currencies = ['€', 'eur', 'euro', '$', 'usd', 'dollar', '£', 'gbp', 'pound']
+        price_mark = ['€', 'euros', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'price', 'hinta']
+        currencies = ['€', 'euros', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound']
         currencies_s = ['€', '$', '£']
         specific = ['\t', '\xa0', '\xad', '\xf0\x9f\x98\x8a']  # items to remove from strings
-
+        countries = ['austria', 'italy', 'belgium', 'latvia', 'bulgaria', 'lithuania', 'croatia', 'luxembourg', 'cyprus', 'malta', 'czechia', 'netherlands', 'denmark', 'poland', 'estonia', 'portugal', 'finland', 'réunion', 'romania', 'france', 'slovakia', 'germany', 'slovenia', 'greece', 'spain', 'hungary', 'sweden', 'ireland', 'united kingdom', 'us', 'usa', 'united states']
         # diet_alergen_en = ['shellfish', 'chicken egg', 'celery', 'pea', 'milk', 'cereals', 'strawberry', 'kiwi', 'citrus fruit', 'almonds', 'nuts', 'certain additives']
         # diet_alergen_fi = ['kalaäyriäiset', 'kanamuna', 'selleri', 'herne', 'maito', 'viljat', 'mansikka', 'kiivi', 'sitrushedelmät', 'mantelit', 'pähkinät', 'tietyt lisäaineet']
+        exclusions_common = ['none:', 'none', 'title', 'cart', 'cart 0', 'cart 1', 'scroll', 'map data', 'data', 'linux', 'unix', 'windows', '×', 'previous', 'next', 'read more', 'menu includes', 'page 0', 'page 1', 'facebook', 'instagram', 'youtube', 'twitter', 'pinterest', 'json', 'rss', 'www', 'http', 'https', 'browser version', 'update your browser', 'latest version', 'switch to the mobile version', 'use this site', 'we use cookies', 'use cookies', 'best experience on our website', 'best experience', 'on our website', 'timed out', 'failed loading page', 'loading page', 'failed', 'welcome to', 'to start or share', 'to start', 'start', 'or share', 'share', 'back to top', 'to top', 'follow the link below', 'follow the link', 'link below', 'skip to content', 'texts', 'pdf', 'pdf file', 'pdf-file', 'uuid', 'rlas3', 'wc.net', '.net', 'id', 'arcki', 'pbs-ri-', '.8dc', '.8d7c', 'rlas', '.io', '.com', '.360', 'a3', 'TapAd', '3WAY', 'SYNCS', 'TapAd_3WAY_SYNCS', 'CMRUM', 'CMRUM3', 'CM1', 'CM14', '3pi', '.adfarm', '.adition', '.adfarm1.adition.com', '.1dmp.io', 'dmp.', 'dmp.io', '.360yield.com', '.360', 'yield.com', '.w55c.net', '.w55c', '.net', 'windows 7', 'windows 10', 'windows' ]
 
         diet_classes_abr = { 
             # to replace using class in html/css
@@ -84,7 +102,11 @@ class check_in_dict():
             'so': ['s/o', 'so'],
             'se': ['se'],
             's': ['s'],
+            'mu': ['mu'],
+            'sin': ['sin'],
+            'see': ['see'],
         }
+
         diet_classes_fi = { 
             # to replace using class in html/css
             '*': ['voi hyvin'],
@@ -102,8 +124,11 @@ class check_in_dict():
             'il': ['ilmastovalinta'],
             'ka': ['kalaa', 'kala', 'kalat', 'kaloja', 'vastuullisesti kalastettua', 'vastuullisesti kalastettu'],
             'kn': ['kanamunaa', 'kanamuna', 'kanamunat', 'kananmunaa', 'kananmunaton', 'kananmunaaton'],
-            'so': ['soijaa', 'soija', 'soija ja osterikastiketta jossa vehnää'],
+            'mu': ['munaton'],
+            'sin': ['sisältää sinappia'],
+            'so': ['soijaa', 'soija', 'sisältää soijaa', 'soija ja osterikastiketta jossa vehnää'],
             'se': ['sisältää selleriä', 'selleriä', 'selleri'],
+            'see': ['sisältää seesaminsiemeniä', 'seesaminsiemeniä', 'seesaminsiemenet'],
             'hth': ['luomua', 'luomu'],  # health
             'imt': ['reilun kaupan tuotteita', 'reilun tuotteita'], # important notice, honest work conditions
         }
@@ -170,6 +195,8 @@ class check_in_dict():
             #'lngs': ['en', 'en_EN', 'fi', 'fi_FI'],  # app works with those languagies -> add a new one before improving code
             'lngs': {'fi-fi': 'fi', 'fin': 'fi', 'fi': 'fi', 'en-en': 'en', 'en-gb': 'en', 'en-us': 'en', 'en-ca': 'en', 'en-in': 'en', 'en-au': 'en', 'en-nz': 'en', 'en-za': 'en', 'en': 'en'},
             'url_param_lang': ['lang', 'lng', 'l'],  # possible writing param names in url
+            'url_types': { 0: 'html', 1: 'pdf', 2: 'img', },
+            'url_types_inv': { 'html': 0,'pdf': 1,'img': 2, },
             'domain_zones_lng': {'co.uk': 'en', 'fi': 'fi', 'sv': 'sv'},
             'abc_en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
             'abc_fi': 'ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄÅabcdefghijklmnopqrstuvwxyzöäå',
@@ -184,12 +211,14 @@ class check_in_dict():
             'we_range_fi': [r'\b(la-su|[la|su] ?- ?la-su|[la|su])\b'],  # week end
             'ws_range_en': [r'\b(su)\b'],  # sunday
             'ws_range_fi': [r'\b(su)\b'],  # sunday
+            # 'menu_types_en': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
+            # 'menu_types_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
             'menu_types_en': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
             'menu_types_fi': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
-            'a la carte_en': ['a la carte', 'menu'],
-            'a la carte_fi': ['a la carte', 'menu', 'ruokalista'],
-            'a la carte_lng_en': ['a la carte', 'menu'],
-            'a la carte_lng_fi': ['a la carte', 'menu', 'ruokalista'],
+            'a la carte_en': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'menu'],
+            'a la carte_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'menu', 'ruokalista'],
+            'a la carte_lng_en': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'menu'],
+            'a la carte_lng_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'menu', 'ruokalista'],
             'breakfast_en': ['breakfast'],
             'breakfast_fi': ['breakfast', 'aamupalo', 'amupalaa', 'amupala'],
             'breakfast_lng_en': ['breakfast'],
@@ -198,13 +227,14 @@ class check_in_dict():
             'set lunch_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'set lunch_lng_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'lunch_en': ['delibuffet', 'lunch', 'buffet'],
-            'lunch_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'noutopöytä', 'seisova pöytä'],
+            'lunch_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto'],
             'lunch_sv': ['smörgåsbord'],
 
             # '_lng' used in language detection
             'lunch_lng_en': ['delibuffet', 'lunch', 'buffet'],
-            'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'noutopöytä', 'seisova pöytä'],
+            'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä'],
             #__________________________________
+
             'lunchsaturday_en': ['lunch'],
             'lunchsaturday_fi': ['lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai'],
             'lunchsaturday_lng_en': ['lunch'],
@@ -221,8 +251,8 @@ class check_in_dict():
             'salatbar_fi': ['salaattibaari', 'salad buffet'],
             'salatbar_lng_en': ['salad buffet'],
             'salatbar_lng_fi': ['salaattibaari'],
-            'lunch_exclusions_en': ['lasten lounas', 'ikävuosi', 'alle 1€'],
-            'lunch_exclusions_fi': ['lasten lounas', 'ikävuosi', 'alle 1€', 'lippuvihko', 'lippu'],
+            'lunch_exclusions_en': ['children lunch', 'senior', 'pensioner', 'less then 1€', 'up to 1€', 'ticket'],
+            'lunch_exclusions_fi': ['keittolounas', 'lasten lounas', 'ikävuosi', 'alle 1€', 'lippuvihko', 'lippu'],
             'and_en': ['and'],
             'and_fi': ['ja'],
 
@@ -254,18 +284,22 @@ class check_in_dict():
             # 'diet_detail_en': {'VE':'vegan', 'M':'milk free', 'L':'lactose free', 'VL':'low-lactose', 'G':'gluten-free', 'T':'hot', 'K':'plant food', 'PÄ':'includes nuts', 'VA':'garlic', 'S/O':'soija and wheat', 'A':'incl. allergen', '[S]':'[S]', '*':'oil'},
             # 'diet_detail_fi': {'VE': 'vegaaninen', 'V': 'vegaani', 'Veg': 'soveltuu vegaaniruokavalioon', 'M': 'maidoton', 'L': 'laktoositon', 'VL': 'vähäläktoosinen', 'G': 'gluteeniton', 'T': 'tulinen', 'K': 'kasviruoka', 'PÄ': 'sisältää pähkinää', 'VA': 'tuoretta valkosipulia', 'VS': 'sisältää valkosipulia', 'S/O':'soija ja osterikastiketta jossa vehnää', 'A': 'sis. allergeeneja', 'S':'S', '*': 'voi hyvin'},
             'allergy_signs_en': ['allergen fractions'],
-            'allergy_signs_fi': ['allergiamerkinnät'],
+            'allergy_signs_fi': ['allergiamerkinnät', 'erikoisruokavalioteksti', 'erikois ruoka valio teksti'],
 
             'menu_en': ['menu', 'list'],
             'menu_fi': ['menu', 'ruokalista', 'lista'],
             'week_en': ['week', ],
-            'week_fi': ['viikko', 'vikko', 'vko', 'vk', 'viikolla', 'viiko', 'tarjolla viikolla'],
+            'week_fi': ['viikko', 'viikkon', 'viikon', 'vikkon', 'vikon', 'vikko', 'vko', 'vk', 'viikolla', 'viiko', 'tarjolla viikolla'],
             'weekend_names_en': ['weekend', ],
             'weekend_names_fi': ['viikkonloppu', 'vikkonloppu', 'vikkonlopu', 'viikonloppu', 'viikonlopu'],
-            'wd_dash_en': ['mon-fri', 'mo-fr'],
+            'wd_dash_en': ['mon-fri', 'mon-tue', 'mon-wed', 'mon-tor', 'mo-fr', 'mo-tu', 'mo-we','mo-to'],
             'wd_dash_fi': ['mo-fr', 'ma-pe', 'Ma-pe', 'MA-PE', 'ma-to', 'Ma-to', 'MA-TO'],
             'open_hours_en': ['clo', 'o\'clock', 'clock', 'open', 'working', 'work'],
             'open_hours_fi': ['clo', 'klo', 'kello', 'avoina', 'arkisin', 'arkipäivä'],
+            'time_en': ['min', 'min.', 'minute', 'minutes', 'hour', 'hours'],
+            'time_fi': ['minuut', 'minuutti', 'minuutit', 'minuutin', 'minuutteja', 'minuuteissa', 'minuutiksi', 'tunt', 'tunti', 'tunnit', 'tunnin', 'tunnissa', 'tunnista', 'tuntiin', 'tunteja', 'tuntien'],
+            'dates_en': ['from', 'to', ],
+            'dates_fi': ['alkaen', 'asti', ],
             'price_mark_en': price_mark,
             'price_mark_fi': price_mark,
             'currencies_en': currencies,
@@ -276,8 +310,8 @@ class check_in_dict():
             # 'date_signs': ['d.m', 'd.m.yyyy', 'm.d', 'yyyy.m.d', 'yyyy.d.m'],
             'weekdays_en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
             'weekdays_fi': ['maanantai', 'manantai', 'tiistai', 'tistai', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'torstai', 'perjantai', 'lauantai', 'sunnuntai', 'sununtai'],
-            'weekdays_open_en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
-            'weekdays_open_fi': ['maanantai', 'manantai', 'tiistai', 'tistai', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'torstai', 'perjantai', 'lauantai'],
+            'weekdays_open_en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+            'weekdays_open_fi': ['maanantai', 'manantai', 'tiistai', 'tistai', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'torstai', 'perjantai', 'lauantai', 'sunnuntai', 'sununtai'],
             'weekend_en': ['sunday'],
             'weekend_fi': ['sunnuntai', 'sununtai'],
             'weekdays_short_en': ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'mon', 'tue', 'wed', 'thr', 'fri', 'sat', 'sun'],
@@ -329,18 +363,32 @@ class check_in_dict():
 
             'date_visit_en': ['Date of visit:', 'date of visit'],
             'date_visit_fi': ['käyntipäivä:', 'käyntipäivä'],
-            'closed_en': ['are closed', 'closed', 'summer break', 'back in business'],
-            'closed_fi': ['tervetuloa jälleen', 'ei lounasta', 'on suljettu', 'olemme suljettuna', 'suljettu', 'kesäloma', 'kesälomalla', 'lomailee', 'kesätauolla', 'palaa takaisin', 'takaisin normirytmiin', 'are closed', 'closed', 'summer break', 'back in business'],
+
+            'errors_en': ['Imunify360', 'blocked access', 'unusual activity', 'socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'not-found', 'not_found', 'notfound', 'page404', 'page-404', 'page_404', 'page 404'],
+            'errors_fi': ['sivu ei ole käytettävissä', 'ei ole käytettävissä', 'sivua ei löytynyt', 'ei löytynyt'],
+
+            'closed_en': ['socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'are closed', 'closed', 'summer break', 'back in business', 'coming soon'],
+            'closed_fi': ['sivu ei ole käytettävissä', 'ei ole käytettävissä', 'sivua ei löytynyt', 'ei löytynyt', 'tervetuloa jälleen', 'ei lounasta', 'on suljettu', 'olemme suljettuna', 'suljettu toistaiseksi', 'suljettu', 'kesäloma', 'kesälomalla', 'lomailee', 'kesätauolla', 'palaa takaisin', 'takaisin normirytmiin', 'are closed', 'closed', 'summer break', 'back in business', 'palaa kesätauolta', 'tulossa pian'],
             'greetings_en': ['hello', 'welcome'],
             'greetings_fi': ['tervetuloa', 'terve', 'moikka', 'moi', 'hello', 'welcome'],
             'specific_en': specific, # items to remove from strings
             'specific_fi': specific, # items to remove from strings
             'url_exclude': ['google', 'bing'],
-            'exclusions_en': ['lunch served', 'to start or share', 'to start', 'start', 'or share', 'share', 'map data', 'data', 'linux', 'unix', 'windows', 'back to top', 'to top', 'for some days', 'booked', 'opened', 'closed', 'look at à la carte-lista', 'follow the link below', 'follow the link', 'link below', 'skip to content', 'texts', 'no menu today', '×', 'previous', 'next', 'read more', 'menu includes', 'page 1', 'facebook', 'instagram', 'youtube', 'twitter', 'pinterest', 'json', 'rss', 'www', 'http', 'https', 'browser version', 'update your browser', 'latest version', 'switch to the mobile version'],  # ignore strings with these items
-            'exclusions_fi': ['map data', 'data', 'linux', 'unix', 'windows', 'tykkää tästä', 'tykkää Lataa', 'sähköpostiisi', 'sähköposti', 'tilaa', 'pdf', 'pdf file', 'pdf-file', 'alho puh.', 'alho puh', 'puh.', 'vaihtuu päivittäin', 'varoitus', 'avoina', 'avoinna', 'suljettu', 'suljetu', 'katso à la carte-lista', 'lutakko', 'laita linkki talteen', 'skip to content', 'texts', 'tekstiä', 'ei ruokalistaa saatavilla', '×', 'previous', 'next', 'lue lisää', 'tulosta lounaslista', 'page 1', 'facebook', 'instagram', 'youtube', 'twitter', 'pinterest', 'json', 'rss', 'www', 'http', 'https'],  # '\t',   # ignore strings with these items
+
+            'address_en': ['street', 'floor', 'building', 'city'],
+            'address_fi': ['katu', 'kerros', 'talo', 'kaupunki'],
+
+            # We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.
+            # \nFailed loading page (Socket operation timed out)\nhttp://www.kujabarbistro.fi/fi/lunch-menu\nNetwork error #4\n
+            'exclusions_en': exclusions_common + ['lunch served' 'for some days', 'booked', 'opened', 'closed', 'look at à la carte-list', 'look at a la carte-list', 'look at à la carte menu', 'look at a la carte menu', 'no menu today', 'la carte', 'carte'],  # ignore strings with these items
+            'exclusions_fi': exclusions_common + [ 'tykkää tästä', 'tykkää Lataa', 'sähköpostiisi', 'sähköposti', 'tilaa', 'alho puh.', 'alho puh', 'puh.', 'vaihtuu päivittäin', 'varoitus', 'avoina', 'avoinna', 'suljettu', 'suljetu', 'katso à la carte-lista', 'katso a la carte-lista', 'lutakko', 'laita linkki talteen', 'tekstiä', 'ei ruokalistaa saatavilla', 'lue lisää', 'tulosta lounaslista', 'ravintolamme aukeaa', 'koko viikko', 'rajaa ruokavaliosi mukaan','näytä vain','voi hyvin','noveltuu vegaaniruokavalioon','älä näytä','sis. tuoretta valkosipulia','sis. allergeeneja','sulje','tyhjennä','tulosta','siitos ymmärryksestänne', 'soveltuu vegaaniruokavalioon', 'päivän lounas'],  # '\t',   # ignore strings with these items
+            'exclusions_in_search_en': ['portions', 'pcs', 'age old', 'children', 'child', 'baby', 'senior', 'offered', 'provided', 'number:'],  # children 4-5
+            'exclusions_in_search_fi': ['yli', 'annokset', 'kpl', 'vuotiaille', 'lapset', 'lapsi', 'eläkeläinen', 'tarjolla', 'number:'],  # lapsi 4-5
+            'countries_en': countries,
+            'countries_fi': countries,
         }
         self.countries = {
-            'eu': ['austria', 'italy', 'belgium', 'latvia', 'bulgaria', 'lithuania', 'croatia', 'luxembourg', 'cyprus', 'malta', 'czechia', 'netherlands', 'denmark', 'poland', 'estonia', 'portugal', 'finland', 'romania', 'france', 'slovakia', 'germany', 'slovenia', 'greece', 'spain', 'hungary', 'sweden', 'ireland', 'united kingdom'],
+            'eu': ['austria', 'italy', 'belgium', 'latvia', 'bulgaria', 'lithuania', 'croatia', 'luxembourg', 'cyprus', 'malta', 'czechia', 'netherlands', 'denmark', 'poland', 'estonia', 'portugal', 'finland', 'réunion', 'romania', 'france', 'slovakia', 'germany', 'slovenia', 'greece', 'spain', 'hungary', 'sweden', 'ireland', 'united kingdom'],
             'us': ['us', 'usa', 'united states'],
         }
         self.replacements = {
@@ -586,8 +634,9 @@ class check_in_dict():
             if lng: key = key + '_' + lng
             words = self.words[key]
             res = '|'.join(words)
-            if key == 'currencies':
-                wc = self.words['currencies_s']
+            if 'currencies' in key:
+                if lng: key = 'currencies_s_' + lng
+                wc = self.words[key]
                 for e in wc:
                     res = res.replace(e, '\\'+e)
             #res = res[:-1]
@@ -619,6 +668,7 @@ class check_in_dict():
             #'([\\[| |\n|]VE[,|.|\\]| |\n]|[\\[| |\n|]Veg[,|.|\\]| |\n]|[\\[| |\n|]M[,|.|\\]| |\n]|[\\[| |\n|]L[,|.|\\]| |\n]|[\\[| |\n|]VL[,|.|\\]| |\n]|[\\[| |\n|]G[,|.|\\]| |\n]|[\\[| |\n|]T[,|.|\\]| |\n]|[\\[| |\n|]K[,|.|\\]| |\n]|[\\[| |\n|]PÄ[,|.|\\]| |\n]|[\\[| |\n|]VA[,|.|\\]| |\n]|[\\[| |\n|]VS[,|.|\\]| |\n]|[\\[| |\n|]A[,|.|\\]| |\n]|[\\[| |\n|]S[,|.|\\]| |\n|])'
 
         res = res.replace(r'*', r'\*')
+        res = res.replace(r'.', r'\.')
 
         if transform and not shorten:
             l = res.split('|')
@@ -641,6 +691,7 @@ class check_in_dict():
 
         if dict_name == 'words': words = self.words[key]
         if dict_name == 'weekdays': words = self.weekdays[key]
+        if dict_name == 'weekdays_full': words = self.weekdays_full[key]
         res = ''
         for a in words:
             res += ''+a+'|'
