@@ -158,7 +158,7 @@ class check_in_dict():
         # Click to show error
         # Error: Server configuration issue
 
-        tel_common = ['p', 't', 'tel', 'num', 'mob', ]
+        tel_common = ['p', 't', 'tel', 'num', 'mob', 'gsm']
         diet_classes_abr = { 
             # to replace using class in html/css
             'a': ['a'],
@@ -263,6 +263,7 @@ class check_in_dict():
 
         errors_common = ['robot', 'antispam', 'imunify 360', 'imunify360', 'blocked access', 'unusual activity', 'socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'not-found', 'not_found', 'notfound', 'page404', 'page-404', 'page_404', 'page 404', 'anti-crawler', 'anti crawler', 'crawler protection', 'cleantalk', 'error establishing a database connection', 'error establishing', 'database connection', 'captcha', 'human and bots', 'forbidden', 'nginx', 'be banned from the site', ]
         
+        punctuation = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
         a = 0  # test stop
 
         self.words = {
@@ -274,6 +275,9 @@ class check_in_dict():
             'url_types': { 0: 'html', 1: 'pdf', 2: 'img', },
             'url_types_inv': { 'html': 0,'pdf': 1,'img': 2, },
             'domain_zones_lng': {'co.uk': 'en', 'fi': 'fi', 'sv': 'sv'},
+            'punctuation': punctuation,
+            'punctuation_en': punctuation,
+            'punctuation_fi': punctuation,
             'abc_en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
             'abc_fi': 'ABCDEFGHIJKLMNOPQRSTUVWXYZÖÄÅabcdefghijklmnopqrstuvwxyzöäå',
             'abc_upper_en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -409,9 +413,9 @@ class check_in_dict():
             'weekend_en': ['sunday'],
             'weekend_fi': ['sunnuntai', 'sununtai'],
             'weekdays_short_en': ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'mon', 'tue', 'wed', 'thr', 'fri', 'sat', 'sun'],
-            'weekdays_short_fi': ['ma', 'ti', 'ke', 'tr', 'to', 'pe', 'la', 'su'],
+            'weekdays_short_fi': ['ma', 'ti', 'ke', 'tr', 'to', 'tor', 'pe', 'la', 'su'],
             'weekdays_open_short_en': ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'mon', 'tue', 'wed', 'thr', 'fri', 'sat'],
-            'weekdays_open_short_fi': ['ma', 'ti', 'ke', 'tr', 'to', 'pe', 'la'],
+            'weekdays_open_short_fi': ['ma', 'ti', 'ke', 'tr', 'to', 'tor', 'pe', 'la'],
             '0_en': ['monday'],
             '1_en': ['tuesday'],
             '2_en': ['wednesday'],
@@ -785,10 +789,15 @@ class check_in_dict():
 
             #'([\\[| |\n|]VE[,|.|\\]| |\n]|[\\[| |\n|]Veg[,|.|\\]| |\n]|[\\[| |\n|]M[,|.|\\]| |\n]|[\\[| |\n|]L[,|.|\\]| |\n]|[\\[| |\n|]VL[,|.|\\]| |\n]|[\\[| |\n|]G[,|.|\\]| |\n]|[\\[| |\n|]T[,|.|\\]| |\n]|[\\[| |\n|]K[,|.|\\]| |\n]|[\\[| |\n|]PÄ[,|.|\\]| |\n]|[\\[| |\n|]VA[,|.|\\]| |\n]|[\\[| |\n|]VS[,|.|\\]| |\n]|[\\[| |\n|]A[,|.|\\]| |\n]|[\\[| |\n|]S[,|.|\\]| |\n|])'
 
-        res = res.replace(r'*', r'\*')
-        res = res.replace(r'.', r'\.')
-        res = res.replace(r'$', r'\$')
-        res = res.replace(r'+', r'\+')
+        # res = res.replace(r'*', r'\*')
+        # res = res.replace(r'.', r'\.')
+        # res = res.replace(r'$', r'\$')
+        # res = res.replace(r'+', r'\+')
+
+        # '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
+        res = self.prepare_punctuations(res)
+
+
 
         if transform and not shorten:
             l = res.split('|')
@@ -823,5 +832,48 @@ class check_in_dict():
         res = res[:-1]
         if shorten: res = '[\n](' + res.replace('|',' )|[\n](') + ' )'
         return res
+
+    def prepare_punctuations(self, a):
+        '''
+            add excl symbol to string
+        '''
+
+        # '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
+
+        a = a.replace(r'+', r'\+')
+        a = a.replace(r'!', r'\!')
+        a = a.replace(r'"', r'\"')
+        a = a.replace(r'#', r'\#')
+        a = a.replace(r'$', r'\$')
+        a = a.replace(r'%', r'\%')
+        a = a.replace(r'&', r'\&')
+        #a = a.replace(r'\', r'\\')
+        a = a.replace(r"'", r"\'")
+        a = a.replace(r'(', r'\(')
+        a = a.replace(r')', r'\)')
+        a = a.replace(r'*', r'\*')
+        a = a.replace(r'+', r'\+')
+        a = a.replace(r',', r'\,')
+        a = a.replace(r'-', r'\-')
+        a = a.replace(r'.', r'\.')
+        a = a.replace(r'/', r'\/')
+        a = a.replace(r':', r'\:')
+        a = a.replace(r';', r'\;')
+        a = a.replace(r'<', r'\<')
+        a = a.replace(r'=', r'\=')
+        a = a.replace(r'>', r'\>')
+        a = a.replace(r'?', r'\?')
+        a = a.replace(r'@', r'\@')
+        # a = a.replace(r'[', r'\[')
+        # a = a.replace(r']', r'\]')
+        a = a.replace(r'^', r'\^')
+        a = a.replace(r'_', r'\_')
+        a = a.replace(r'`', r'\`')
+        a = a.replace(r'{', r'\{')
+        # a = a.replace(r'|', r'\|')
+        a = a.replace(r'}', r'\}')
+        a = a.replace(r'~', r'\~')
+
+        return a
 
 #check_in_dict = check_in_dict
