@@ -65,6 +65,23 @@ class check_in_dict():
             5: 6,
             6: 0,
         }
+        self.weekdays_semantic = {
+            '0_en': {'nominative': 'monday', 'genetive': 'monday', 'innessive': 'monday'},
+            '1_en': {'nominative': 'tuesday', 'genetive': 'tuesday', 'innessive': 'tuesday'},
+            '2_en': {'nominative': 'wednesday', 'genetive': 'wednesday', 'innessive': 'wednesday'},
+            '3_en': {'nominative': 'thursday', 'genetive': 'thursday', 'innessive': 'thursday'},
+            '4_en': {'nominative': 'friday', 'genetive': 'friday', 'innessive': 'friday'},
+            '5_en': {'nominative': 'saturday', 'genetive': 'saturday', 'innessive': 'saturday'},
+            '6_en': {'nominative': 'sunday', 'genetive': 'sunday', 'innessive': 'sunday'},
+            
+            '0_fi': {'nominative': 'maanantai', 'genetive': 'maanantain', 'innessive': 'maanantaissa'},
+            '1_fi': {'nominative': 'tiistai', 'genetive': 'tiistain', 'innessive': 'tiistaissa'},
+            '2_fi': {'nominative': 'keskiviikko', 'genetive': 'keskiviikkon', 'innessive': 'keskiviikkossa'},
+            '3_fi': {'nominative': 'torstai', 'genetive': 'torstain', 'innessive': 'torstaissa'},
+            '4_fi': {'nominative': 'perjantai', 'genetive': 'perjantain', 'innessive': 'perjantaissa'},
+            '5_fi': {'nominative': 'lauantai', 'genetive': 'lauantain', 'innessive': 'lauantaissa'},
+            '6_fi': {'nominative': 'sunnuntai', 'genetive': 'sunnuntain', 'innessive': 'sunnuntaissa'},
+        }
         self.weekdays_full = {
             '0_en': ['monday'],
             '1_en': ['tuesday'],
