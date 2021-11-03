@@ -221,7 +221,7 @@ class check_in_dict():
             'vs': ['vs'],
             'm': ['m'],
             'l': ['l'],
-            'g': ['g*', 'g'],
+            'g': ['g*', 'g', 'gl'],
             'ht': ['t'],
             'k': ['k'],
             'so': ['s/o', 'so', 'soy'],
