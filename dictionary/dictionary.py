@@ -370,7 +370,7 @@ class check_in_dict():
             'set lunch_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'set lunch_lng_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'lunch_en': ['delibuffet', 'lunch', 'buffet'],
-            'lunch_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', ],
+            'lunch_fi': ['arkilounas', 'lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', ],
             'lunch_sv': ['smörgåsbord'],
             'drinks_en': ['drinks', 'drink menu', ],
             'drinks_fi': ['juomalista', 'juoma'],
@@ -382,10 +382,21 @@ class check_in_dict():
             'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto'],
             #__________________________________
 
-            'lunchsaturday_en': ['lunch'],
+
+            'lunchweekend_en': ['lunch', 'weekend'],
+            'lunchweekend_fi': ['viikonloppuisin', 'viikonlopuisin', 'viikonloppu', 'lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai', 'sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
+            'lunchweekend_lng_en': ['lunch', 'weekend'],
+            'lunchweekend_lng_fi': ['viikonloppuisin', 'viikonlopuisin', 'viikonloppu', 'lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai', 'sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
+            
+            'lunchsaturday_en': ['lunch', 'saturday'],
             'lunchsaturday_fi': ['lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai'],
-            'lunchsaturday_lng_en': ['lunch'],
+            'lunchsaturday_lng_en': ['lunch', 'saturday'],
             'lunchsaturday_lng_fi': ['lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai'],
+            'lunchsunday_en': ['lunch', 'brunch', 'sunday'],
+            'lunchsunday_fi': ['sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
+            'lunchsunday_lng_en': ['lunch', 'brunch', 'sunday'],
+            'lunchsunday_lng_fi': ['sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
+            
             'brunch_en': ['brunch'],
             'brunch_fi': ['bistrobrunssi', 'brunssi', 'brunch'],
             'brunch_lng_en': ['brunch'],
@@ -529,8 +540,8 @@ class check_in_dict():
             'closed_to_txt_en': ['closed'],
             'closed_to_txt_fi': ['suljettu'],
             # temp closed
-            'closed_en': ['are closed', 'closed', 'summer break', 'back in business', 'coming soon',],
-            'closed_fi': ['ei lounasta', 'on suljettu', 'olemme suljettuna', 'suljettu', 'are closed', 'closed'],
+            'closed_en': ['are closed', 'closed', 'privat event', 'summer break', 'back in business', 'coming soon',],
+            'closed_fi': ['ei lounasta', 'on suljettu', 'olemme suljettuna', 'suljettu', 'yksityistilaisuus', 'are closed', 'closed'],
             # permanent closed
             'closed_permanent_en': ['has permanently closed', 'permanently closed', 'closed permanently', 'closed for good', 'is closing its doors', 'shut its doors', 'decided to close the doors for good', 'decided to close the doors', 'business is closing its doors', 'business is closing'],
             'closed_permanent_fi': ['summer break', 'palaa kesätauolta', 'tulossa pian', 'back in business', 'tervetuloa jälleen', 'kesäloma', 'kesälomalla', 'olemme tauolla', 'lomailee', 'kesätauolla', 'palaa takaisin', 'takaisin normirytmiin', 'suljettu toistaiseksi', 'uusi omistaja', 'ravintolan toiminta on loppunut', 'on sulkemassa oviaan pysyvästi', 'ravintola on suljettu pysyvästi', 'sulkevansa ovensa pysyvästi', 'suljettu pysyvästi', 'sulkeutuvat pysyvästi', 'sulkevat ovensa', 'joutuu sulkemaan pysyvästi ovensa', 'sivu ei ole käytettävissä', 'ei ole käytettävissä', 'sivua ei löytynyt', 'ei löytynyt', 'vuokrasopimus on päättynyt', 'sopimus on päättyy', 'sulkupäättyy', 'sulku päättyy', 'ravintolasulun päättyminen', 'ravintolasulun päättymisen vuoksi', 'ravintolasulun päättymisen', 'lopullisesti', 'loppullisesti', 'toiminta päättyy konkurssin vuoksi', 'toiminta päättyy', 'päättyy konkurssin vuoksi', 'konkurssin vuoksi', 'lopettavat toimintansa välittömästi konkurssin takia', 'on asetettu konkurssiin', 'toiminta loppuu', 'haettiin konkurssiin', 'sivusto on arkistoitu tai hyllytetty', 'sivusto on arkistoitu', 'sivusto on hyllytetty'],
