@@ -375,7 +375,7 @@ class check_in_dict():
             'set lunch_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'set lunch_lng_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'lunch_en': ['delibuffet', 'lunch', 'buffet'],
-            'lunch_fi': ['arkilounas', 'lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', 'lounas viikolla'],
+            'lunch_fi': ['arkilounas', 'lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', 'lounas viikolla'],  # 'jälkiruoka', 
             'lunch_sv': ['smörgåsbord'],
             'drinks_en': ['drinks', 'drink menu', ],
             'drinks_fi': ['juomalista', 'juoma'],
