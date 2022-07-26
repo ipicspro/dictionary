@@ -226,9 +226,11 @@ class check_in_dict():
             'g': ['g*', 'g', 'gl'],
             'ht': ['t'],
             'k': ['k'],
+            'keto': ['keto'],
             'so': ['s/o', 'so', 'soy'],
             'se': ['se'],
             's': ['s'],
+            'suomi': ['suomi'],
             'mu': ['mu'],
             'sin': ['sin'],
             'see': ['see'],
@@ -306,10 +308,10 @@ class check_in_dict():
             for b in diet_classes_abr[a]:
                 diet_classes[b] = a
                 diet_abr.append(b.upper())
-                if b in ['veg', 've', 'vega', 'soi', 'soy']: diet_abr.append(b.title())  # , 'vege'
+                if b in ['veg', 've', 'vega', 'soi', 'soy', 'keto', 'suomi']: diet_abr.append(b.title())  # , 'vege'
                 if b not in diet_abr_unsafe:
                     diet_abr_safe.append(b.upper())
-                    if b in ['veg', 've', 'vega', 'soi', 'soy']: diet_abr_safe.append(b.title())  # , 'vege'
+                    if b in ['veg', 've', 'vega', 'soi', 'soy', 'keto', 'suomi']: diet_abr_safe.append(b.title())  # , 'vege'
                 # if b in diet_classes_en:
                 #     c = diet_classes_en[b]
                 #     for d in c:
