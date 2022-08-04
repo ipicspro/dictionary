@@ -798,7 +798,8 @@ class check_in_dict():
             if not text.strip(): return ''
         except: return ''
         allchars = [e for e in text]
-        emoji_list = [c for c in allchars if c in emoji.UNICODE_EMOJI]
+        # emoji_list = [c for c in allchars if c in emoji.UNICODE_EMOJI]
+        emoji_list = [c for c in allchars if emoji.is_emoji(c)]
         clean_text = ' '.join([e for e in text.split() if not any(i in e for i in emoji_list)])
         return clean_text
 
