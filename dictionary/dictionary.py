@@ -222,6 +222,7 @@ class check_in_dict():
             'va': ['va', 'v'],  # should be after 'vs' to avoide mistake in replacement_diet()
             'vs': ['vs'],
             'm': ['m'],
+            'ilm': ['ilm'],
             'l': ['l'],
             'g': ['g*', 'g', 'gl'],
             'ht': ['t'],
@@ -256,6 +257,7 @@ class check_in_dict():
             'ht': ['tulinen'],
             'k': ['palkokasveja', 'palkokasvikset', 'kasviruoka', 'lacto-ovo-kasvis', 'lacto ovo kasvis'],
             'il': ['ilmastovalinta'],
+            'ilm': ['ilmastoystävällinen'],
             'ka': ['kalaa', 'kala', 'kalat', 'kaloja', 'vastuullisesti kalastettua', 'vastuullisesti kalastettu'],
             'kn': ['kanamunaa', 'kanamuna', 'kanamunat', 'kananmunaa', 'kananmunaton', 'kananmunaaton'],
             'mu': ['munaton'],
@@ -276,6 +278,7 @@ class check_in_dict():
             'ht': ['hot'], 
             'k': ['plant food'], 
             'nt': ['includes nuts', 'incl. nuts', 'nuts', 'almond'], 
+            'ilm': ['climate friendly', 'climate-smart', 'sustainable'],
             'l': ['lactosefree', 'lactose free'], 
             've': ['vegan'], 
             'va': ['garlic'], 
