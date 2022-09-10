@@ -220,7 +220,9 @@ class check_in_dict():
             'vl': ['vl'],
             'nt': ['pä'],
             'va': ['va', 'v'],  # should be after 'vs' to avoide mistake in replacement_diet()
-            'vs': ['vs'],
+            'vs': ['sis vs', 'vs'],
+            # 'sis vs': ['sis vs'],
+            # 'vs': ['vs'],
             'm': ['m'],
             'ilm': ['ilm'],
             'l': ['l'],
@@ -315,6 +317,9 @@ class check_in_dict():
                 if b not in diet_abr_unsafe:
                     diet_abr_safe.append(b.upper())
                     if b in ['veg', 've', 'vega', 'soi', 'soy', 'keto', 'suomi']: diet_abr_safe.append(b.title())  # , 'vege'
+                diet_abr.append('sis VS')
+                diet_abr_safe.append('sis VS')
+                
                 # if b in diet_classes_en:
                 #     c = diet_classes_en[b]
                 #     for d in c:
