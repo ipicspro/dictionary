@@ -163,7 +163,7 @@ class check_in_dict():
             'mo': 'mon',
             'tu': 'tue',
             'we': 'wed',
-            'th': 'thr',
+            'th': 'thu',
             'fr': 'fri',
             'sa': 'sat',
             'su': 'sun',
