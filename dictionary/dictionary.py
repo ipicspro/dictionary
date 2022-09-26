@@ -520,7 +520,7 @@ class check_in_dict():
             '5_fi': ['lauantai', 'lauantain'],
             '6_fi': ['sunnuntai', 'sununtai', 'sunnuntain'],
             'months_en': ['january','february','march','april','may','june','jule','august','september','october','november','december'],
-            'months_fi': ['tammikuu','helmikuu', 'maaliskuu','huhtikuu','toukokuu','kesäkuu','heinäkuu','syyskuu','lokakuu','marraskuu','joulukuu', 'tammiku','helmiku','maalisku','huhtiku','toukoku','kesäku','heinäku','syysku','lokaku','marrasku','jouluku', 'maliskuu', 'maaliskuu', 'kesakuu', 'kesaku', 'syskuu', 'sysku', 'maraskuu', 'marasku'],
+            'months_fi': ['tammikuu','helmikuu', 'maaliskuu','huhtikuu','toukokuu','kesäkuu','heinäkuu','elokuu','syyskuu','lokakuu','marraskuu','joulukuu', 'tammiku','helmiku','maalisku','huhtiku','toukoku','kesäku','heinäku','syysku','lokaku','marrasku','jouluku', 'maliskuu', 'maaliskuu', 'kesakuu', 'kesaku', 'syskuu', 'sysku', 'maraskuu', 'marasku'],
 
             'm1_en': ['january'],
             'm2_en': ['february'],
