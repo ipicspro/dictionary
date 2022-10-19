@@ -520,7 +520,7 @@ class check_in_dict():
             '5_fi': ['lauantai', 'lauantain'],
             '6_fi': ['sunnuntai', 'sununtai', 'sunnuntain'],
             'months_en': ['january','february','march','april','may','june','jule','august','september','october','november','december'],
-            'months_fi': ['tammikuu','helmikuu', 'maaliskuu','huhtikuu','toukokuu','kesäkuu','heinäkuu','elokuu','syyskuu','lokakuu','marraskuu','joulukuu', 'tammiku','helmiku','maalisku','huhtiku','toukoku','kesäku','heinäku','syysku','lokaku','marrasku','jouluku', 'maliskuu', 'maaliskuu', 'kesakuu', 'kesaku', 'syskuu', 'sysku', 'maraskuu', 'marasku'],
+            'months_fi': ['tammikuu','helmikuu', 'maaliskuu','huhtikuu','toukokuu','kesäkuu','heinäkuu','syyskuu','lokakuu','marraskuu','joulukuu', 'tammiku','helmiku','maalisku','huhtiku','toukoku','kesäku','heinäku','syysku','lokaku','marrasku','jouluku', 'maliskuu', 'maaliskuu', 'kesakuu', 'kesaku', 'syskuu', 'sysku', 'maraskuu', 'marasku'],
 
             'm1_en': ['january'],
             'm2_en': ['february'],
@@ -565,6 +565,19 @@ class check_in_dict():
             # permanent closed
             'closed_permanent_en': ['has permanently closed', 'permanently closed', 'closed permanently', 'closed for good', 'is closing its doors', 'shut its doors', 'decided to close the doors for good', 'decided to close the doors', 'business is closing its doors', 'business is closing'],
             'closed_permanent_fi': ['summer break', 'palaa kesätauolta', 'tulossa pian', 'back in business', 'tervetuloa jälleen', 'kesäloma', 'kesälomalla', 'olemme tauolla', 'lomailee', 'kesätauolla', 'palaa takaisin', 'takaisin normirytmiin', 'suljettu toistaiseksi', 'uusi omistaja', 'ravintolan toiminta on loppunut', 'on sulkemassa oviaan pysyvästi', 'ravintola on suljettu pysyvästi', 'sulkevansa ovensa pysyvästi', 'suljettu pysyvästi', 'sulkeutuvat pysyvästi', 'sulkevat ovensa', 'joutuu sulkemaan pysyvästi ovensa', 'sivu ei ole käytettävissä', 'ei ole käytettävissä', 'sivua ei löytynyt', 'ei löytynyt', 'vuokrasopimus on päättynyt', 'sopimus on päättyy', 'sulkupäättyy', 'sulku päättyy', 'ravintolasulun päättyminen', 'ravintolasulun päättymisen vuoksi', 'ravintolasulun päättymisen', 'lopullisesti', 'loppullisesti', 'toiminta päättyy konkurssin vuoksi', 'toiminta päättyy', 'päättyy konkurssin vuoksi', 'konkurssin vuoksi', 'lopettavat toimintansa välittömästi konkurssin takia', 'on asetettu konkurssiin', 'toiminta loppuu', 'haettiin konkurssiin', 'sivusto on arkistoitu tai hyllytetty', 'sivusto on arkistoitu', 'sivusto on hyllytetty'],
+
+            'closed_temp_en': {
+                0: "No A la carte {date0} - {date1}.",
+                1: "No Breakfast {date0} - {date1}.",
+                2: "No Lunch {date0} - {date1}.",
+                3: "No Brunch {date0} - {date1}.",
+            },
+            'closed_temp_fi': {
+                0: "Ravintola on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
+                1: "Aamiainen on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
+                2: "Lounas on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
+                3: "Brunssi on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
+            },
 
             'greetings_en': ['hello', 'welcome'],
             'greetings_fi': ['tervetuloa', 'terve', 'moikka', 'moi', 'hello', 'welcome'],
