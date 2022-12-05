@@ -28,10 +28,14 @@ class check_in_dict():
         }
         self.menu_type = {
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
+            # MENU_TYPES = [(0, 'a la carte'), (1, 'breakfast'), (11, 'breakfast_leftovers'), (2, 'lunch'), (21, 'lunch_leftovers'), (3, 'brunch'), (30, 'brunch_event'), (4, 'dinner'), (5, 'set lunch')]
             0: 'a la carte',
             1: 'breakfast',
+            11: 'breakfast leftovers',
             2: 'lunch',
+            21: 'lunch leftovers',
             3: 'brunch',
+            30: 'brunch event',
             4: 'dinner',
             5: 'set lunch',
             6: 'drinks',
@@ -40,8 +44,11 @@ class check_in_dict():
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
             0: 'alacarte',
             1: 'breakfast',
+            11: 'breakfast leftovers',
             2: 'lunch',
+            21: 'lunch leftovers',
             3: 'brunch',
+            30: 'brunch event',
             4: 'dinner',
             5: 'set lunch',
             6: 'drinks',
@@ -50,8 +57,11 @@ class check_in_dict():
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
             0: 'menu',
             1: 'aamiainen',
+            11: 'aamiainen hävikkiruoka',
             2: 'lounas',
+            21: 'lounas hävikkiruoka',
             3: 'brunssi',
+            30: 'brunssi tapahtuma',
             4: 'illallinen',
             5: 'maistelumenu',
             6: 'juoma',
