@@ -142,15 +142,7 @@ class check_in_dict():
             'sa': 5,
             'su': 6,
         }
-        self.weekdays_name_num_en = {
-            'mo': 0,
-            'tu': 1,
-            'we': 2,
-            'th': 3,
-            'fr': 4,
-            'sa': 5,
-            'su': 6,
-        }
+        self.weekdays_name_num_en = self.weekdays_name_num
         self.weekdays_name_num_fi = {
             'ma': 0,
             'ti': 1,
@@ -187,6 +179,16 @@ class check_in_dict():
             'sa': 'la',
             'su': 'su',
         }
+        self.weekdays_parse_db_en = {
+            'mo': 'mo',
+            'tu': 'tu',
+            'we': 'we',
+            'th': 'th',
+            'fr': 'fr',
+            'sa': 'sa',
+            'su': 'su',
+        }
+        self.weekdays_parse_db_fi = self.weekdays_parse_fi
 
 
         # use this in duplicated cases in 'words' (for different languages are same values)
