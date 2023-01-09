@@ -56,15 +56,15 @@ class check_in_dict():
         self.menu_type_url_se = {
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
             0: 'alacarte',
-            1: 'breakfast',
-            11: 'breakfast leftovers',
+            1: 'frukost',
+            11: 'frukost matrester',
             2: 'lunch',
-            21: 'lunch leftovers',
+            21: 'lunch matrester',
             3: 'brunch',
             30: 'brunch event',
-            4: 'dinner',
+            4: 'middag',
             5: 'set lunch',
-            6: 'drinks',
+            6: 'drycker',
         }
         self.menu_type_url_fi = {
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
@@ -97,14 +97,14 @@ class check_in_dict():
             '4_en': {'nominative': 'friday', 'genetive': 'friday', 'innessive': 'friday'},
             '5_en': {'nominative': 'saturday', 'genetive': 'saturday', 'innessive': 'saturday'},
             '6_en': {'nominative': 'sunday', 'genetive': 'sunday', 'innessive': 'sunday'},
-            
-            '0_se': {'nominative': 'monday', 'genetive': 'monday', 'innessive': 'monday'},
-            '1_se': {'nominative': 'tuesday', 'genetive': 'tuesday', 'innessive': 'tuesday'},
-            '2_se': {'nominative': 'wednesday', 'genetive': 'wednesday', 'innessive': 'wednesday'},
-            '3_se': {'nominative': 'thursday', 'genetive': 'thursday', 'innessive': 'thursday'},
-            '4_se': {'nominative': 'friday', 'genetive': 'friday', 'innessive': 'friday'},
-            '5_se': {'nominative': 'saturday', 'genetive': 'saturday', 'innessive': 'saturday'},
-            '6_se': {'nominative': 'sunday', 'genetive': 'sunday', 'innessive': 'sunday'},
+
+            '0_se': {'nominative': 'måndag', 'genetive': 'måndag', 'innessive': 'måndag'},
+            '1_se': {'nominative': 'tisdag', 'genetive': 'tisdag', 'innessive': 'tisdag'},
+            '2_se': {'nominative': 'onsdag', 'genetive': 'onsdag', 'innessive': 'onsdag'},
+            '3_se': {'nominative': 'torsdag', 'genetive': 'torsdag', 'innessive': 'torsdag'},
+            '4_se': {'nominative': 'fredag', 'genetive': 'fredag', 'innessive': 'fredag'},
+            '5_se': {'nominative': 'lördag', 'genetive': 'lördag', 'innessive': 'lördag'},
+            '6_se': {'nominative': 'söndag', 'genetive': 'söndag', 'innessive': 'söndag'},
             
             '0_fi': {'nominative': 'maanantai', 'genetive': 'maanantain', 'innessive': 'maanantaissa'},
             '1_fi': {'nominative': 'tiistai', 'genetive': 'tiistain', 'innessive': 'tiistaissa'},
@@ -123,13 +123,13 @@ class check_in_dict():
             '5_en': ['saturday'],
             '6_en': ['sunday'],
             
-            '0_se': ['monday'],
-            '1_se': ['tuesday'],
-            '2_se': ['wednesday'],
-            '3_se': ['thursday'],
-            '4_se': ['friday'],
-            '5_se': ['saturday'],
-            '6_se': ['sunday'],
+            '0_se': ['måndag'],
+            '1_se': ['tisdag'],
+            '2_se': ['onsdag'],
+            '3_se': ['torsdag'],
+            '4_se': ['fredag'],
+            '5_se': ['lördag'],
+            '6_se': ['söndag'],
             
             '0_fi': ['maanantai', 'manantai', 'maananati', 'maananatai'],
             '1_fi': ['tiistai', 'tistai'],
@@ -148,13 +148,13 @@ class check_in_dict():
             '5_en': ['saturday', 'sat', 'sa'],
             '6_en': ['sunday', 'sun', 'su'],
             
-            '0_se': ['monday', 'mon', 'mo'],
-            '1_se': ['tuesday', 'tue', 'tu'],
-            '2_se': ['wednesday', 'wed', 'we'],
-            '3_se': ['thursday', 'thu', 'th'],
-            '4_se': ['friday', 'fri', 'fr'],
-            '5_se': ['saturday', 'sat', 'sa'],
-            '6_se': ['sunday', 'sun', 'su'],
+            '0_se': ['måndag', 'mån', 'må'],
+            '1_se': ['tisdag', 'tis', 'ti'],
+            '2_se': ['onsdag', 'ons', 'on'],
+            '3_se': ['torsdag', 'tor', 'to'],
+            '4_se': ['fredag', 'fre', 'fr'],
+            '5_se': ['lördag', 'lör', 'lö'],
+            '6_se': ['söndag', 'sön', 'sö'],
             
             '0_fi': ['maanantai', 'maanantain', 'manantai', 'maananati', 'maananatai', 'ma'],
             '1_fi': ['tiistai', 'tiistain', 'tistai', 'ti'],
@@ -166,10 +166,10 @@ class check_in_dict():
         }
         self.weekend = {
             '5_en': ['saturday'],
-            '5_se': ['saturday'],
+            '5_se': ['lördag'],
             '5_fi': ['saturday', 'lauantai'],
             '6_en': ['sunday'],
-            '6_se': ['sunday'],
+            '6_se': ['söndag'],
             '6_fi': ['sunday', 'sunnuntai'],
         }
         self.weekdays_name_num = {
@@ -183,13 +183,13 @@ class check_in_dict():
         }
         self.weekdays_name_num_en = self.weekdays_name_num
         self.weekdays_name_num_se = {
-            'ma': 0,
+            'må': 0,
             'ti': 1,
-            'ke': 2,
+            'on': 2,
             'to': 3,
-            'pe': 4,
-            'la': 5,
-            'su': 6,
+            'fr': 4,
+            'lö': 5,
+            'sö': 6,
         }
         self.weekdays_name_num_fi = {
             'ma': 0,
@@ -219,13 +219,13 @@ class check_in_dict():
             'su': 'sun',
         }
         self.weekdays_parse_se = {
-            'mo': 'mon',
-            'tu': 'tue',
-            'we': 'wed',
-            'th': 'thu',
-            'fr': 'fri',
-            'sa': 'sat',
-            'su': 'sun',
+            'mo': 'mån',
+            'tu': 'tis',
+            'we': 'ons',
+            'th': 'tor',
+            'fr': 'fre',
+            'sa': 'lör',
+            'su': 'sön',
         }
         self.weekdays_parse_fi = {
             'mo': 'ma',
@@ -246,13 +246,13 @@ class check_in_dict():
             'su': 'su',
         }
         self.weekdays_parse_db_se = {
-            'mo': 'mo',
-            'tu': 'tu',
-            'we': 'we',
-            'th': 'th',
+            'mo': 'må',
+            'tu': 'ti',
+            'we': 'on',
+            'th': 'to',
             'fr': 'fr',
-            'sa': 'sa',
-            'su': 'su',
+            'sa': 'lö',
+            'su': 'sö',
         }
         self.weekdays_parse_db_fi = self.weekdays_parse_fi
 
