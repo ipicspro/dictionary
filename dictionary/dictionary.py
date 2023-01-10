@@ -258,10 +258,10 @@ class check_in_dict():
 
 
         # use this in duplicated cases in 'words' (for different languages are same values)
-        price_mark = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'price', 'hinta', 'Kr', 'SEK']
-        currencies = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'Kr', 'SEK']
-        currencies_s = ['€', '$', '£', 'Kr']
-        currencies_s_escape = ['€', '$', '£']
+        price_mark = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'price', 'hinta', 'Kr', 'SEK', ':-']
+        currencies = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'Kr', 'SEK', ':-']
+        currencies_s = ['€', '$', '£', 'Kr', ':-']
+        currencies_s_escape = ['€', '$', '£', ':-']
         currencies_convert = {
             '€': 'EUR',
             '$': 'USD',
@@ -502,9 +502,9 @@ class check_in_dict():
             'set lunch_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'set lunch_lng_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'lunch_en': ['delibuffet', 'lunch', 'buffet'],
-            'lunch_se': ['smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'knuff', 'byffe', 'skänk', 'buffe'],
+            'lunch_se': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'dagens avhämtning', 'lunchmeny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckans', 'dagens lunch', 'dagens meny', 'lunchpizzor', 'husets special', 'kvällens buffé', 'helgens buffé', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe'],
             'lunch_fi': ['arkilounas', 'lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', 'lounas viikolla'],  # 'jälkiruoka', 
-            'lunch_sv': ['smörgåsbord'],
+            'lunch_sv': ['lunchbuffé', 'smörgåsbord'],
             'drinks_en': ['drinks', 'drink menu', ],
             'drinks_se': ['drycker', 'dryckmeny', 'dryck', 'dryck meny', ],
             'drinks_fi': ['juomalista', 'juoma'],
@@ -514,7 +514,7 @@ class check_in_dict():
 
             # '_lng' used in language detection
             'lunch_lng_en': ['delibuffet', 'delhi buffet', 'lunch', 'buffet'],
-            'lunch_lng_se': ['delibuffet', 'lunch', 'buffet', 'buffé', 'knuff', 'byffe', 'skänk', 'buffe'],
+            'lunch_lng_se': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'dagens avhämtning', 'lunchmeny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckans', 'dagens lunch', 'dagens meny', 'lunchpizzor', 'husets special', 'kvällens buffé', 'helgens buffé', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe'],
             'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto'],
             #__________________________________
 
@@ -552,10 +552,10 @@ class check_in_dict():
             'dinner_lng_se': ['middag'],
             'dinner_lng_fi': ['iltakeitto arkisin', 'illalinen', 'iltakeitto'],
             'salatbar_en': ['salad buffet'],
-            'salatbar_se': ['salladbuffé'],
+            'salatbar_se': ['salladbuffé', 'salladsbuffé', 'salladbuffe', 'salladsbuffe'],
             'salatbar_fi': ['salaattibaari', 'salad buffet'],
             'salatbar_lng_en': ['salad buffet'],
-            'salatbar_lng_se': ['salladbuffé', 'salladsbuffé'],
+            'salatbar_lng_se': ['salladbuffé', 'salladsbuffé', 'salladbuffe', 'salladsbuffe'],
             'salatbar_lng_fi': ['salaattibaari'],
             'lunch_exclusions_en': ['children lunch', 'senior', 'pensioner', 'less then 1€', 'up to 1€', 'ticket'],
             'lunch_exclusions_se': ['barn lunch', 'barnlunch', 'äldre', 'senior', 'pensionär', 'mindre än 1 Kr', 'mindre än 1Kr', 'upp till 1 Kr', 'upp till 1Kr', 'biljett', 'ticket'],
@@ -565,7 +565,7 @@ class check_in_dict():
             'and_fi': ['ja'],
 
             'offer_lunch_en': ['delibuffet', 'lunch', 'buffet'],
-            'offer_lunch_se': ['delibuffet', 'lunch', 'buffet', 'buffé'],
+            'offer_lunch_se': ['delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe'],
             'offer_lunch_fi': ['lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka'],
             'offer_breakfast_en': ['breakfast'],
             'offer_breakfast_se': ['frukost'],
@@ -629,7 +629,7 @@ class check_in_dict():
             'weekend_names_fi': ['viikkonloppu', 'vikkonloppu', 'vikkonlopu', 'viikonlopu', 'viikonloppu', 'viikonloppu', 'viikonloppua', 'vapaapäivä', 'pyhäpäivä', 'juhlapäivä', 'juhlapyhä', 'arkipyhä', 'arkivapaa', 'juhannusatto', 'juhannus atto', 'jouluatto', 'joulu atto'],
             
             'open_hours_en': ['clo', 'o\'clock', 'clock', 'open', 'working', 'work', 'open today', 'opened today'],
-            'open_hours_se': ['clo', 'o\'klocka', 'klocka', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag'],
+            'open_hours_se': ['kl', 'kl[.]', 'clo', 'o\'klocka', 'klocka', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag'],
             'open_hours_fi': ['clo', 'klo', 'kello', 'avoina', 'arkisin', 'arkipäivä', 'auki', 'aukioloajat', 'avoinna tänään', 'avoinna'],
             'time_en': ['min', 'min.', 'minute', 'minutes', 'hour', 'hours'],
             'time_se': ['min', 'min.', 'minut', 'minuter', 'timme', 'timmar'],
