@@ -261,7 +261,7 @@ class check_in_dict():
         price_mark = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'price', 'hinta', 'Kr', 'SEK', ':-']
         currencies = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'Kr', 'SEK', ':-']
         currencies_s = ['€', '$', '£', 'Kr', ':-']
-        currencies_s_escape = ['€', '$', '£', ':-']
+        currencies_s_escape = ['€', '$', '£']
         currencies_convert = {
             '€': 'EUR',
             '$': 'USD',
@@ -1103,7 +1103,10 @@ class check_in_dict():
                 # wc = self.currencies_s_escape
                 wc = self.words['currencies_s_escape']
                 for e in wc:
-                    res = res.replace(e, '\\'+e)
+                    e_new = e
+                    for e2 in e:
+                        e_new = e_new.replace(e2, '\\'+e2)
+                    res = res.replace(e, e_new)
                 res = res.replace('\\$', '[$]')
            
             #res = res[:-1]
