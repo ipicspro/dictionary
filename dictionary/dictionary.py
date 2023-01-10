@@ -40,26 +40,14 @@ class check_in_dict():
             5: 'set lunch',
             6: 'drinks',
         }
-        self.menu_type_url_en = {
-            #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
-            0: 'alacarte',
-            1: 'breakfast',
-            11: 'breakfast leftovers',
-            2: 'lunch',
-            21: 'lunch leftovers',
-            3: 'brunch',
-            30: 'brunch event',
-            4: 'dinner',
-            5: 'set lunch',
-            6: 'drinks',
-        }
+        self.menu_type_url_en = self.menu_type
         self.menu_type_url_se = {
             #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
             0: 'alacarte',
             1: 'frukost',
-            11: 'frukost matrester',
+            11: 'frukost matsvinn',
             2: 'lunch',
-            21: 'lunch matrester',
+            21: 'lunch matsvinn',
             3: 'brunch',
             30: 'brunch event',
             4: 'middag',
