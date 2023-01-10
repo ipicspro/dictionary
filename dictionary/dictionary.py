@@ -261,6 +261,7 @@ class check_in_dict():
         price_mark = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'price', 'hinta', 'Kr', 'SEK']
         currencies = ['€', 'euros', 'euron', 'euro', 'eur', '$', 'usd', 'dollars', 'dollar', '£', 'gbp', 'pounds', 'pound', 'Kr', 'SEK']
         currencies_s = ['€', '$', '£', 'Kr']
+        currencies_s_escape = ['€', '$', '£']
         currencies_convert = {
             '€': 'EUR',
             '$': 'USD',
@@ -646,6 +647,7 @@ class check_in_dict():
             'currencies_s_en': currencies_s,
             'currencies_s_se': currencies_s,
             'currencies_s_fi': currencies_s,
+            'currencies_s_escape': currencies_s_escape,
             
             # compare with today's date + from 1 ro 7 days further
             # 'date_signs': ['d.m', 'd.m.yyyy', 'm.d', 'yyyy.m.d', 'yyyy.d.m'],
@@ -1094,9 +1096,12 @@ class check_in_dict():
 
             res = '|'.join(words)
 
+            # fix escaping
             if 'currencies' in key:
                 if lng: key = 'currencies_s_' + lng
-                wc = self.words[key]
+                # wc = self.words[key]
+                # wc = self.currencies_s_escape
+                wc = self.words['currencies_s_escape']
                 for e in wc:
                     res = res.replace(e, '\\'+e)
                 res = res.replace('\\$', '[$]')
