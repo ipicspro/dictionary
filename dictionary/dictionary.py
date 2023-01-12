@@ -26,46 +26,119 @@ class check_in_dict():
             'p': 9,
             'div': 10,
         }
+
+        # used in extractor to get right dictionary instancies by menu_type name
         self.menu_type = {
-            #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
-            # MENU_TYPES = [(0, 'a la carte'), (1, 'breakfast'), (11, 'breakfast_leftovers'), (2, 'lunch'), (21, 'lunch_leftovers'), (3, 'brunch'), (30, 'brunch_event'), (4, 'dinner'), (5, 'set lunch')]
+            #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}  # for projects in Finland
+            # MENU_TYPES = [
+            #     (0, 'a la carte'),
+            #     (1, 'breakfast'),
+            #     (11, 'breakfast_leftovers'),
+            #     (2, 'lunch'),
+            #     (21, 'lunch_leftovers'),
+            #     (3, 'brunch'),
+            #     (30, 'brunch_event'),
+            #     (4, 'dinner'),
+            #     (5, 'set lunch')
+            # ]
+
             0: 'a la carte',
             1: 'breakfast',
             11: 'breakfast leftovers',
             2: 'lunch',
             21: 'lunch leftovers',
             3: 'brunch',
+            21: 'brunch leftovers',
             30: 'brunch event',
             4: 'dinner',
             5: 'set lunch',
             6: 'drinks',
+
+            100: 'a la carte',
+            101: 'breakfast',
+            111: 'breakfast leftovers',
+            102: 'lunch',
+            121: 'lunch leftovers',
+            103: 'brunch',
+            121: 'brunch leftovers',
+            130: 'brunch event',
+            104: 'dinner',
+            105: 'set lunch',
+            106: 'drinks',
         }
-        self.menu_type_url_en = self.menu_type
-        self.menu_type_url_se = {
-            #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
-            0: 'alacarte',
-            1: 'frukost',
-            11: 'frukost matsvinn',
-            2: 'lunch',
-            21: 'lunch matsvinn',
-            3: 'brunch',
-            30: 'brunch event',
-            4: 'middag',
-            5: 'set lunch',
-            6: 'drycker',
+
+        # used in mng exporter to convert mng.menu_type to lns.web_url.menu_type
+        self.menu_type_network_inv = {
+            None: '',
+
+            # Finland
+            0: 'myravintola.fi',
+            1: 'aamiaiset.fi',
+            11: 'aamiaiset.fi leftovers',
+            2: 'lounasmenu.fi',
+            21: 'lounasmenu.fi leftovers',
+            3: 'brunssit.fi',
+            21: 'brunssit.fi leftovers',
+            30: 'brunssit.fi event',
+            # 4: 'dinner',
+            # 5: 'set lunch',
+            # 6: 'drinks',
+
+            # Sweden
+            100: 'restaurang.se',
+            101: 'frukost.se',
+            111: 'frukost.se leftovers',
+            102: 'mylunch.se',
+            121: 'mylunch.se leftovers',
+            103: 'bruncher.se',
+            130: 'bruncher.se event',
+            121: 'bruncher.se leftovers',
+            # 104: 'dinner',
+            # 105: 'set lunch',
+            # 106: 'drinks',
         }
+        self.menu_type_network = {v:k for k,v in self.menu_type_network_inv.items()}
+
+
+        # used to attach to url to company page
+        # {'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
         self.menu_type_url_fi = {
-            #{'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
-            0: 'menu',
+            0: 'ruokalista',
             1: 'aamiainen',
-            11: 'aamiainen hävikkiruoka',
+            11: 'aamiainen-hävikkiruoka',
             2: 'lounas',
-            21: 'lounas hävikkiruoka',
+            21: 'lounas-hävikkiruoka',
             3: 'brunssi',
-            30: 'brunssi tapahtuma',
+            30: 'brunssi-tapahtuma',
             4: 'illallinen',
             5: 'maistelumenu',
             6: 'juoma',
+        }
+        # to use mostly with luncher.fi as english version of lounasmenu.fi
+        self.menu_type_url_en = {
+            0: 'menu',
+            1: 'breakfast',
+            11: 'breakfast-leftovers',
+            2: 'lunch',
+            21: 'lunch-leftovers',
+            3: 'brunch',
+            21: 'brunch-leftovers',
+            30: 'brunch-event',
+            4: 'dinner',
+            5: 'setlunch',
+            6: 'drinks',
+        }
+        self.menu_type_url_se = {
+            100: 'meny',
+            101: 'frukost',
+            1011: 'frukost-matsvinn',
+            102: 'lunch',
+            1021: 'lunch-matsvinn',
+            103: 'brunch',
+            1030: 'brunch-event',
+            104: 'middag',
+            105: 'setlunch',
+            106: 'drycker',
         }
         # translate python weekday number to javascript
         self.weekdays_js = {
