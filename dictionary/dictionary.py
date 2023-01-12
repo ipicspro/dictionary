@@ -82,7 +82,7 @@ class check_in_dict():
             30: 'brunssit.fi event',
             # 4: 'dinner',
             # 5: 'set lunch',
-            # 6: 'drinks',
+            6: 'drinks',
 
             # Sweden
             100: 'restaurang.se',
@@ -95,7 +95,7 @@ class check_in_dict():
             121: 'bruncher.se leftovers',
             # 104: 'dinner',
             # 105: 'set lunch',
-            # 106: 'drinks',
+            106: 'drinks',
         }
         self.menu_type_network = {v:k for k,v in self.menu_type_network_inv.items()}
 
