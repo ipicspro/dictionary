@@ -99,6 +99,42 @@ class check_in_dict():
         }
         self.menu_type_network = {v:k for k,v in self.menu_type_network_inv.items()}
 
+        # used in image processing to filter images and use only those one contains such a tag name in image keywords
+        self.project_tags = {
+            'rst': 'a la cart',
+            'brf': 'breakfast',
+            'lns': 'lunch',
+            'brn': 'brunch|breakfast',
+
+            'srt': 'a la cart',
+            'sbf': 'breakfast',
+            'slh': 'lunch',
+            'sbn': 'brunch|breakfast',
+        }
+
+        # used to translate ptoject_name to menu_type code to work with sql
+        self.project_codes = {
+            # 'brn': [1,3],
+            'rst': [0],
+            'brf': [1],
+            'brf_lft': [11],  # leftovers
+            'lns': [2],
+            'lns_lft': [21],  # leftovers
+            'brn': [3],
+            'brn_chr': [30],
+            'brn_frd': [30],
+            'brn_lft': [31],  # leftovers
+
+            'srt': [100],
+            'sbf': [101],
+            'sbf_lft': [111],  # leftovers
+            'slh': [102],
+            'slh_lft': [121],  # leftovers
+            'sbn': [103],
+            'sbn_chr': [130],
+            'sbn_frd': [130],
+            'sbn_lft': [131],  # leftovers
+        }
 
         # used to attach to url to company page
         # {'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
