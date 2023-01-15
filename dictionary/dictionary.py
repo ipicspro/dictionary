@@ -136,6 +136,30 @@ class check_in_dict():
             'sbn_lft': [131],  # leftovers
         }
 
+        self.project_language = {
+            'rst': 'fi',
+            'rst_lft': 'fi',
+            'brf': 'fi',
+            'brf_lft': 'fi',
+            'lns': 'fi',
+            'lns_lft': 'fi',
+            'brn': 'fi',
+            'brn_chr': 'fi',
+            'brn_frd': 'fi',
+            'brn_lft': 'fi',
+
+            'srt': 'se',
+            'srt_lft': 'se',
+            'sbf': 'se',
+            'sbf_lft': 'se',
+            'slh': 'se',
+            'slh_lft': 'se',
+            'sbn': 'se',
+            'sbn_chr': 'se',
+            'sbn_frd': 'se',
+            'sbn_lft': 'se',
+        }
+
         # used to attach to url to company page
         # {'a la carte': 0, 'breakfast': 1, 'lunch': 2, 'brunch': 3, 'dinner': 4}
         self.menu_type_url_fi = {
