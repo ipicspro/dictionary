@@ -200,6 +200,8 @@ class check_in_dict():
             105: 'setlunch',
             106: 'drycker',
         }
+        self.menu_type_url_en.update(self.menu_type_url_se)
+
         # translate python weekday number to javascript
         self.weekdays_js = {
             0: 1,
