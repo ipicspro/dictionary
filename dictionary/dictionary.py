@@ -663,7 +663,7 @@ class check_in_dict():
             'lunchsunday_lng_fi': ['sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
             
             'brunch_en': ['brunch'],
-            'brunch_ese': ['brunch', 'frukost-lunch', 'frukostmiddag'],
+            'brunch_se': ['brunch', 'frukost-lunch', 'frukostmiddag'],
             'brunch_fi': ['bistrobrunssi', 'brunssi', 'brunch'],
             'brunch_lng_en': ['brunch'],
             'brunch_lng_se': ['brunch'],
