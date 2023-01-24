@@ -86,8 +86,8 @@ class check_in_dict():
 
             # Sweden
             100: 'restaurang.se',
-            101: 'frukost.se',
-            111: 'frukost.se leftovers',
+            101: 'myfrukost.se',
+            111: 'myfrukost.se leftovers',
             102: 'mylunch.se',
             121: 'mylunch.se leftovers',
             103: 'bruncher.se',
