@@ -747,7 +747,7 @@ class check_in_dict():
             'wd_dash_fi': ['mo-fr', 'ma-pe', 'Ma-pe', 'MA-PE', 'ma-to', 'Ma-to', 'MA-TO'],
 
             'week_en': ['week', ],
-            'week_se': ['vecka', 'vka'],
+            'week_se': ['vecka', 'vka', 'v'],
             'week_fi': ['viikko', 'viikkon', 'viikolle', 'viikon', 'vikkon', 'vikon', 'vikko', 'vko', 'vk', 'viikolla', 'viiko', 'tarjolla viikolla'],
             
             'working_names_en': ['working', 'work', 'bank', 'banking'],
