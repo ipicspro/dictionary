@@ -573,7 +573,7 @@ class check_in_dict():
             # compare only lowercase
             #######################################################
             #'lngs': ['en', 'en_EN', 'fi', 'fi_FI'],  # app works with those languagies -> add a new one before improving code
-            'lngs': {'fi-fi': 'fi', 'fin': 'fi', 'fi': 'fi', 'en-en': 'en', 'en-gb': 'en', 'en-us': 'en', 'en-ca': 'en', 'en-in': 'en', 'en-au': 'en', 'en-nz': 'en', 'en-za': 'en', 'en': 'en', 'se-se': 'se', 'se': 'se', 'sv': 'se', 'sv-sv': 'se', 'swe': 'se', },
+            'lngs': {'fi-fi': 'fi', 'fin': 'fi', 'fi': 'fi', 'en-en': 'en', 'en-gb': 'en', 'en-us': 'en', 'en-ca': 'en', 'en-in': 'en', 'en-au': 'en', 'en-nz': 'en', 'en-za': 'en', 'en': 'en', 'se-se': 'se', 'se': 'se', 'sv': 'se', 'sv-sv': 'se', 'swe': 'se', 'sv-se': 'se', },
             'url_param_lang': ['lang', 'lng', 'l'],  # possible writing param names in url
             'url_types': { 0: 'html', 1: 'pdf', 2: 'img', },
             'url_types_inv': { 'html': 0,'pdf': 1,'img': 2, },
