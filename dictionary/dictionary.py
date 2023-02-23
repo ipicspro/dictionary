@@ -957,8 +957,8 @@ class check_in_dict():
             'countries_fi': countries,
             'languages': ['english', 'finnish', 'swedish',],
 
-            'def_content_no_menu_en': 'No menu for today. Please contact the rastaurat directly.',
-            'def_content_no_menu_se': 'Ingen meny för idag. Kontakta Rastaurat direkt.',
+            'def_content_no_menu_en': 'No menu for today. Please contact the rastaurant directly.',
+            'def_content_no_menu_se': 'Ingen meny för idag. Kontakta Rastaurant direkt.',
             'def_content_no_menu_fi': 'Ei ruokalistaa saatavilla. Ota yhteyttä suoraan ravintolaan.',
         }
         self.countries = {
