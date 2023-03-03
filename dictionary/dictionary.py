@@ -254,13 +254,13 @@ class check_in_dict():
             '5_se': ['lördag'],
             '6_se': ['söndag'],
             
-            '0_fi': ['maanantai', 'manantai', 'maananati', 'maananatai'],
-            '1_fi': ['tiistai', 'tistai'],
-            '2_fi': ['keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko'],
-            '3_fi': ['torstai'],
-            '4_fi': ['perjantai'],
-            '5_fi': ['lauantai'],
-            '6_fi': ['sunnuntai', 'sununtai'],
+            '0_fi': ['maanantai', 'maanantain', 'maanantaina', 'manantaina', 'manantai', 'maananati', 'maananatai', 'maananatain', 'maananataina', 'ma'],
+            '1_fi': ['tiistai', 'tiistain', 'tiistaina', 'tistai', 'tistain', 'tistaina', 'ti'],
+            '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'ke'],
+            '3_fi': ['torstai', 'torstain', 'torstaina', 'to'],
+            '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'pe'],
+            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'la'],
+            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'su'],
         }
         self.weekdays = {
             '0_en': ['monday', 'mon', 'mo'],
@@ -279,21 +279,21 @@ class check_in_dict():
             '5_se': ['lördag', 'lör', 'lö'],
             '6_se': ['söndag', 'sön', 'sö'],
             
-            '0_fi': ['maanantai', 'maanantain', 'manantai', 'maananati', 'maananatai', 'ma'],
-            '1_fi': ['tiistai', 'tiistain', 'tistai', 'ti'],
-            '2_fi': ['keskiviikko', 'keskiviikon', 'keskiviiko', 'keskivikko', 'keskiviko', 'ke'],
-            '3_fi': ['torstai', 'torstain', 'to'],
-            '4_fi': ['perjantai', 'perjantain', 'pe'],
-            '5_fi': ['lauantai', 'lauantain', 'la'],
-            '6_fi': ['sunnuntai', 'sunnuntain', 'sununtai', 'su']
+            '0_fi': ['maanantai', 'maanantain', 'maanantaina', 'manantaina', 'manantai', 'maananati', 'maananatai', 'maananatain', 'maananataina', 'ma'],
+            '1_fi': ['tiistai', 'tiistain', 'tiistaina', 'tistai', 'tistain', 'tistaina', 'ti'],
+            '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'ke'],
+            '3_fi': ['torstai', 'torstain', 'torstaina', 'to'],
+            '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'pe'],
+            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'la'],
+            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'su'],
         }
         self.weekend = {
             '5_en': ['saturday'],
             '5_se': ['lördag'],
-            '5_fi': ['saturday', 'lauantai'],
+            '5_fi': ['saturday', 'lauantai', 'lauantain', 'lauantaina'],
             '6_en': ['sunday'],
             '6_se': ['söndag'],
-            '6_fi': ['sunday', 'sunnuntai'],
+            '6_fi': ['sunday', 'sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina'],
         }
         self.weekdays_name_num = {
             'mo': 0,
