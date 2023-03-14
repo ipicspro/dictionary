@@ -984,7 +984,7 @@ class check_in_dict():
             'languages': ['english', 'finnish', 'swedish',],
 
             'def_content_no_menu_en': 'No menu for today. Please contact the restaurant directly.',
-            'def_content_no_menu_se': 'Ingen meny för idag. Kontakta restaurant direkt.',
+            'def_content_no_menu_se': 'Ingen meny för idag. Kontakta restaurang direkt.',
             'def_content_no_menu_fi': 'Ei ruokalistaa saatavilla. Ota yhteyttä suoraan ravintolaan.',
         }
         self.countries = {
