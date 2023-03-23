@@ -929,10 +929,10 @@ class check_in_dict():
                 103: "No Brunch {date0} - {date1}.",
             },
             'closed_temp_se': {
-                100: "Nej a la carte",
-                101: "Ingen frukost {date0} - {date1}.",
-                102: "Ingen lunch {date0} - {date1}.",
-                103: "Ingen brunch {date0} - {date1}.",
+                100: "Restaurang serverar inte a la carte från {date0} till {date1}.",
+                101: "Restaurang serverar inte frukost från {date0} till {date1}.",
+                102: "Restaurang serverar inte lunch från {date0} till {date1}.",
+                103: "Restaurang serverar inte brunch till från {date0} till {date1}.",
             },
             'closed_temp_fi': {
                 0: "Ravintola on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
