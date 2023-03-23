@@ -923,12 +923,16 @@ class check_in_dict():
                 1: "No Breakfast {date0} - {date1}.",
                 2: "No Lunch {date0} - {date1}.",
                 3: "No Brunch {date0} - {date1}.",
+                100: "No A la carte {date0} - {date1}.",
+                101: "No Breakfast {date0} - {date1}.",
+                102: "No Lunch {date0} - {date1}.",
+                103: "No Brunch {date0} - {date1}.",
             },
             'closed_temp_se': {
-                0: "Nej a la carte",
-                1: "Ingen frukost {date0} - {date1}.",
-                2: "Ingen lunch {date0} - {date1}.",
-                3: "Ingen brunch {date0} - {date1}.",
+                100: "Nej a la carte",
+                101: "Ingen frukost {date0} - {date1}.",
+                102: "Ingen lunch {date0} - {date1}.",
+                103: "Ingen brunch {date0} - {date1}.",
             },
             'closed_temp_fi': {
                 0: "Ravintola on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
