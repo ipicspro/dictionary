@@ -646,7 +646,7 @@ class check_in_dict():
             'lunchsunday_fi': ['sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
             
             'brunch_en': ['brunch'],
-            'brunch_se': ['brunch', 'frukost-lunch', 'frukostmiddag'],
+            'brunch_se': ['brunch', 'frukost-lunch', 'frukostmiddag', 'helgmeny', 'helglunch'],
             'brunch_fi': ['bistrobrunssi', 'brunssi', 'brunch'],
             'dinner_en': ['dinner'],
             'dinner_se': ['middag', 'middagsmål', 'bankett'],
@@ -676,7 +676,7 @@ class check_in_dict():
             'set lunch_lng_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'brunch_lng_en': ['brunch'],
             'brunch_lng_se': ['brunch'],
-            'brunch_lng_fi': ['bistrobrunssi', 'brunssi'],
+            'brunch_lng_fi': ['bistrobrunssi', 'brunssi', 'helgmeny', 'helglunch'],
             'dinner_lng_en': ['dinner'],
             'dinner_lng_se': ['middag'],
             'dinner_lng_fi': ['iltakeitto arkisin', 'illalinen', 'iltakeitto'],
