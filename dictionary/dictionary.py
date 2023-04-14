@@ -623,7 +623,7 @@ class check_in_dict():
             'a la carte_lng_sv': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'ala carte', 'meny'],
             'a la carte_lng_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'ala carte', 'menu', 'ruokalista'],
             'breakfast_en': ['breakfast'],
-            'breakfast_sv': ['frukost'],
+            'breakfast_sv': ['frukost', 'frukst'],
             'breakfast_fi': ['breakfast', 'aamupalo', 'amupalaa', 'amupala'],
             'set lunch_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'set lunch_sv': ['meny du jour', 'lunchmeny', 'lunch timmeny', 'set lunchmeny', 'lunchmeny (tors-lör)', 'weekday lunch meny', 'provuppsättning lunch', 'flexibel lunchmeny', 'exempel på lunchmeny', 'kockens uppsättning lunchmeny'],
@@ -658,7 +658,7 @@ class check_in_dict():
 
             # '_lng' used in language detection
             'breakfast_lng_en': ['breakfast'],
-            'breakfast_lng_sv': ['frukost'],
+            'breakfast_lng_sv': ['frukost', 'frukst'],
             'breakfast_lng_fi': ['amupalaa', 'amupala', 'aamupalo'],
             'lunch_lng_en': ['delibuffet', 'delhi buffet', 'lunch', 'buffet'],
             'lunch_lng_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch'],
@@ -692,7 +692,7 @@ class check_in_dict():
 
             # '_simple' used in 1st iteration of link detection (simple connecting word)
             'breakfast_simple_en': ['breakfast'],
-            'breakfast_simple_sv': ['frukost'],
+            'breakfast_simple_sv': ['frukost', 'frukst'],
             'breakfast_simple_fi': ['amupalaa', 'amupala', 'aamupalo'],
             'lunch_simple_en': ['lunch'],
             'lunch_simple_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'lunch', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch'],
