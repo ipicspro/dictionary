@@ -564,7 +564,7 @@ class check_in_dict():
                 #         if b in ['veg', 'soi', 'soy']: bu = b.title()
                 #         diet_detail_fi[bu] = d
 
-        errors_common = ['robot', 'antispam', 'imunify 360', 'imunify360', 'blocked access', 'unusual activity', 'socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'not-found', 'not_found', 'notfound', 'page404', 'page-404', 'page_404', 'page 404', 'anti-crawler', 'anti crawler', 'crawler protection', 'cleantalk', 'error establishing a database connection', 'error establishing', 'database connection', 'captcha', 'human and bots', 'forbidden', 'nginx', 'be banned from the site', 'that page can\’t be found', 'that page can\'t be found', 'page can\’t be found', 'page can\'t be found', 'nothing was found', 'try to search for something else']
+        errors_common = ['robot', 'antispam', 'imunify 360', 'imunify360', 'blocked access', 'unusual activity', 'socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'not-found', 'not_found', 'notfound', 'page404', 'page-404', 'page_404', 'page 404', 'anti-crawler', 'anti crawler', 'crawler protection', 'cleantalk', 'error establishing a database connection', 'error establishing', 'database connection', 'captcha', 'human and bots', 'forbidden', 'nginx', 'be banned from the site', 'that page can\’t be found', 'that page can\'t be found', 'page can\’t be found', 'page can\'t be found', 'nothing was found', 'try to search for something else', 'JavaScript', ]
         # 404 - sidan kunde inte hittas
 
         punctuation = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
@@ -664,7 +664,7 @@ class check_in_dict():
             'lunch_lng_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch'],
             'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto'],
             'lunchweekend_lng_en': ['lunch', 'weekend'],
-            'lunchweekend_lng_sv': ['lunch', 'helgen', 'helger', 'veckans slut', 'veckansslut', 'veckoslut', 'semester', 'högtider', 'helgdag', 'helgdagar'],
+            'lunchweekend_lng_sv': ['lunch', 'helgen', 'helger', 'veckans slut', 'veckansslut', 'veckoslut', 'högtider', 'helgdag', 'helgdagar'],  # , 'semester'
             'lunchweekend_lng_fi': ['viikonloppuisin', 'viikonlopuisin', 'viikonloppu', 'lauantaisin', 'launtaisin', 'lauantailounas', 'lauantai', 'sunnuntaisin', 'sunnuntasin', 'sunnuntailounas', 'sunnuntai', 'sunnuntaisin brunssi'],
             'lunchsaturday_lng_en': ['lunch', 'saturday'],
             'lunchsaturday_lng_sv': ['lunch', 'lördag'],
@@ -676,8 +676,8 @@ class check_in_dict():
             'set lunch_lng_sv': ['meny du jour', 'lunchmeny', 'lunch timmeny', 'set lunchmeny', 'lunchmeny (tors-lör)', 'weekday lunch meny', 'provuppsättning lunch', 'flexibel lunchmeny', 'exempel på lunchmeny', 'kockens uppsättning lunchmeny'],
             'set lunch_lng_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'brunch_lng_en': ['brunch'],
-            'brunch_lng_sv': ['brunch'],
-            'brunch_lng_fi': ['bistrobrunssi', 'brunssi', 'helgmeny', 'helglunch'],
+            'brunch_lng_sv': ['brunch', 'helgmeny', 'helglunch', 'helgen', 'helger', 'veckans slut', 'veckansslut', 'veckoslut', 'högtider', 'helgdag', 'helgdagar'],
+            'brunch_lng_fi': ['bistrobrunssi', 'brunssi'],
             'dinner_lng_en': ['dinner'],
             'dinner_lng_sv': ['middag'],
             'dinner_lng_fi': ['iltakeitto arkisin', 'illalinen', 'iltakeitto'],
@@ -701,7 +701,7 @@ class check_in_dict():
             'set lunch_simple_sv': ['meny du jour', 'lunchmeny', 'lunch timmeny', 'set lunchmeny', 'lunchmeny (tors-lör)', 'weekday lunch meny', 'provuppsättning lunch', 'flexibel lunchmeny', 'exempel på lunchmeny', 'kockens uppsättning lunchmeny'],
             'set lunch_simple_fi': ['set lunch', 'set lounas', 'päivän annos'],
             'brunch_simple_en': ['brunch'],
-            'brunch_simple_sv': ['brunch'],
+            'brunch_simple_sv': ['brunch', 'helgmeny', 'helglunch', 'helgen', 'helger', 'veckans slut', 'veckansslut', 'veckoslut', 'högtider', 'helgdag', 'helgdagar'],
             'brunch_simple_fi': ['bistrobrunssi', 'brunssi'],
             'dinner_simple_en': ['dinner'],
             'dinner_simple_sv': ['middag'],
