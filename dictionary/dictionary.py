@@ -786,7 +786,7 @@ class check_in_dict():
             'weekend_names_fi': ['viikkonloppu', 'vikkonloppu', 'vikkonlopu', 'viikonlopu', 'viikonloppu', 'viikonloppu', 'viikonloppua', 'vapaapäivä', 'pyhäpäivä', 'juhlapäivä', 'juhlapyhä', 'arkipyhä', 'arkivapaa', 'juhannusatto', 'juhannus atto', 'jouluatto', 'joulu atto'],
             
             'open_hours_en': ['clo', 'o\'clock', 'clock', 'open', 'working', 'work', 'open today', 'opened today'],
-            'open_hours_sv': ['kl', 'kl[.]', 'clo', 'o\'klocka', 'klocka', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag'],
+            'open_hours_sv': ['kl', 'kl[.]', 'clo', 'o\'klocka', 'klocka', 'öppettider', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag'],
             'open_hours_fi': ['clo', 'klo', 'kello', 'avoina', 'arkisin', 'arkipäivä', 'auki', 'aukioloajat', 'avoinna tänään', 'avoinna'],
             'time_en': ['min', 'min.', 'minute', 'minutes', 'hour', 'hours'],
             'time_sv': ['min', 'min.', 'minut', 'minuter', 'timme', 'timmar'],
