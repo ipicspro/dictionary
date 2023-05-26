@@ -423,6 +423,8 @@ class check_in_dict():
         diet_classes_abr = { 
             # to replace using class in html/css
             'a': ['a'],
+            'ägg': ['ägg'],
+            'bv': ['bv'],
             'vh': ['*'],
             've': ['vg', 've', 'veg', 'vega'],  # , 'vege'
             'vl': ['vl'],
@@ -431,14 +433,14 @@ class check_in_dict():
             'vs': ['sis vs', 'vs'],
             # 'sis vs': ['sis vs'],
             # 'vs': ['vs'],
-            'm': ['m'],
+            'm': ['m', 'mp'],
             'ilm': ['ilm'],
             'l': ['l'],
             'g': ['g*', 'g', 'gl'],
             'ht': ['t'],
             'k': ['k'],
             'keto': ['keto'],
-            'so': ['s/o', 'so', 'soy'],
+            'so': ['s/o', 'so', 'soy', 'soja'],
             'se': ['se'],
             's': ['s'],
             'suomi': ['suomi'],
@@ -449,7 +451,7 @@ class check_in_dict():
             'w': ['w'],
             'an': ['ä'],
             'p': ['p'],
-            'n': ['n'],
+            'n': ['n', 'nt'],
         }
 
         diet_classes_fi = { 
@@ -499,21 +501,38 @@ class check_in_dict():
             '**': ['pork free'],
         }
         diet_classes_sv = {
+            """
+                ALLERGENER
+                (S) innehåller senap
+                (MP) innehåller mjölkprotein
+                (G) innehåller gluten
+                (L) innehåller laktos
+                (ägg) innehåller ägg
+                (soja) innehåller soja
+                (BV) innehåller baljväxter
+                (N) innehåller nötter
+            """
             '*': ['oil'], 
             'a': ['includes allergen', 'incl. allergen', 'allergen'], 
+            'bv': ['innehåller baljväxter'],
+            'ägg': ['innehåller ägg'],
             'm': ['milkfree', 'milk free'], 
-            'g': ['glutenfree', 'gluten free', 'gluten-free'], 
+            'mp': ['innehåller mjölkprotein'], 
+            'g': ['glutenfree', 'gluten free', 'gluten-free', 'innehåller gluten'], 
             'ht': ['hot'], 
             'k': ['plant food'], 
-            'nt': ['includes nuts', 'incl. nuts', 'nuts', 'almond'], 
+            'nt': ['includes nuts', 'incl. nuts', 'nuts', 'almond', 'innehåller nötter'], 
+            'n': ['includes nuts', 'incl. nuts', 'nuts', 'almond', 'innehåller nötter'], 
             'ilm': ['climate friendly', 'climate-smart', 'sustainable'],
-            'l': ['lactosefree', 'lactose free'], 
+            'l': ['lactosefree', 'lactose free', 'innehåller laktos'], 
             've': ['vegan'], 
             'va': ['garlic'], 
             'vl': ['low lactose', 'low-lactose'], 
-            'so': ['soija', 'soija and wheat', 'soy'], 
+            'so': ['soija', 'soija and wheat', 'soy', 'innehåller soja'], 
+            'soja': ['soija', 'soija and wheat', 'soy', 'innehåller soja'], 
             'hth': ['healthy'],
             'w': ['wheat'], 
+            's': ['innehåller senap'],
             '**': ['pork free'],
         }
 
