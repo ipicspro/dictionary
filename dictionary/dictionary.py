@@ -844,9 +844,9 @@ class check_in_dict():
             'weekdays_open_short_fi': ['ma', 'ti', 'ke', 'tr', 'to', 'tor', 'pe', 'la'],
             
             # during searching weekday sequencies patterns to exclude from strings to avoid mistakes in weekdays
-            'weekdays_misleading_en': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', 'á la', 'à la', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'
-            'weekdays_misleading_sv': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', 'á la', 'à la', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'
-            'weekdays_misleading_fi': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', 'á la', 'à la', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'
+            'weekdays_misleading_en': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'  NOT: 'á la', 'à la', 
+            'weekdays_misleading_sv': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'  NOT: 'á la', 'à la', 
+            'weekdays_misleading_fi': ['a la carte', 'la famiglian', 'la famiglia', 'à la Firenze', 'a la Firenze', 'á la Firenze', 'á la ravintola', 'a la ravintola', 'a la Helsinki', ],  # '(reserve\s+[(]\s*fr\s*[)]\s*$)', '(\d\d\d\d\s+[(]\s*fr\s*[)]\s*$)'  NOT: 'á la', 'à la', 
 
             '0_en': ['monday'],
             '1_en': ['tuesday'],
