@@ -396,7 +396,7 @@ class check_in_dict():
         
         countries = ['austria', 'italy', 'belgium', 'latvia', 'bulgaria', 'lithuania', 'croatia', 'luxembourg', 'cyprus', 'malta', 'czechia', 'netherlands', 'denmark', 'poland', 'estonia', 'portugal', 'finland', 'réunion', 'romania', 'france', 'slovakia', 'germany', 'slovenia', 'greece', 'spain', 'hungary', 'sweden', 'ireland', 'united kingdom', 'us', 'usa', 'united states']
         
-        volume_common = ['mg', 'ml', 'l', 'cl', 'dl', 'g', 'gr', 'microgramm', 'microgramms', 'milligramm', 'milligramms', 'gramm', 'gramms', 'kg', 'kilo', 'kilogramm', 'kilogramms', 'pinta', 'km', 'metriä', 'meters', 'meter']
+        volume_common = ['mg', 'ml', 'l', 'cl', 'dl', 'g', 'gr', 'microgramm', 'microgramms', 'milligramm', 'milligramms', 'gramm', 'gramms', 'kg', 'kilo', 'kilogramm', 'kilogramms', 'pinta', 'km', 'metriä', 'meters', 'meter', 'bottle', 'btl', 'bt', 'pullo', 'fl', 'flaska']
         # diet_alergen_en = ['shellfish', 'chicken egg', 'celery', 'pea', 'milk', 'cereals', 'strawberry', 'kiwi', 'citrus fruit', 'almonds', 'nuts', 'certain additives']
         # diet_alergen_fi = ['kalaäyriäiset', 'kanamuna', 'selleri', 'herne', 'maito', 'viljat', 'mansikka', 'kiivi', 'sitrushedelmät', 'mantelit', 'pähkinät', 'tietyt lisäaineet']
        
@@ -1249,7 +1249,7 @@ class check_in_dict():
         if lng: list_name = list_name + '_' + lng
         return self.words[list_name]
 
-    def get_patt(self, key, lng='', shorten=None, transform='', external=[]):
+    def get_patt(self, key, lng='', shorten=None, transform='', external=[], escape=False):
         # shorten - to remake pattern to work with short weekdays names
         # return pattern for re made by words in key in dict words
         # external list of words
@@ -1341,9 +1341,13 @@ class check_in_dict():
                 elif t == 'lower': a = a.lower()
                 ln.append(a)
             res = '|'.join(ln)
+
+        if escape:
+            res = re.escape(res)
+
         return res
 
-    def get_pat_dict(self, key, dict_name='words', lng='', shorten=False):
+    def get_pat_dict(self, key, dict_name='words', lng='', shorten=False, escape=False):
         # shorten - to remake pattern to work with short weekdays names
         # return pattern for re made by words in key in dict words
         if self.lng and not lng: lng = self.lng
@@ -1362,6 +1366,10 @@ class check_in_dict():
             res = res.replace('\\$', '[$]')
         res = res[:-1]
         if shorten: res = '[\n](' + res.replace('|',' )|[\n](') + ' )'
+
+        if escape:
+            res = re.escape(res)
+
         return res
 
     def prepare_punctuations(self, a):
