@@ -808,7 +808,7 @@ class check_in_dict():
             'schedule_open_hours_sv': ['öppettider', 'arbetstider', ],
             'schedule_open_hours_fi': ['aukioloajat', 'lounasajat', 'keskustoimisto avoinna', 'olemme avoinna', 'lounasta tarjoillaan', 'lounas tarjolla arkisin'],
             'open_hours_en': ['clo', 'o\'clock', 'clock', 'open', 'working', 'work', 'open today', 'opened today'],
-            'open_hours_sv': ['kl', 'kl[.]', 'clo', 'o\'klocka', 'klocka', 'öppettider', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag', 'från'],
+            'open_hours_sv': ['kl', 'kl[.]', 'clo', 'o\'klocka', 'klocka', 'klockan', 'öppettider', 'öppet', 'arbetssätt', 'arbete', 'öppet idag', 'öppnades idag', 'från'],
             'open_hours_fi': ['clo', 'klo', 'kello', 'avoina', 'arkisin', 'arkipäivä', 'auki', 'aukioloajat', 'avoinna tänään', 'avoinna'],
             'time_en': ['min', 'min.', 'minute', 'minutes', 'hour', 'hours'],
             'time_sv': ['min', 'min.', 'minut', 'minuter', 'timme', 'timmar'],
