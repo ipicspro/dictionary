@@ -274,7 +274,7 @@ class check_in_dict():
             '0_sv': ['måndag', 'mån', 'må'],
             '1_sv': ['tisdag', 'tis', 'ti'],
             '2_sv': ['onsdag', 'ons', 'on'],
-            '3_sv': ['torsdag', 'tor', 'to'],
+            '3_sv': ['torsdag', 'tors', 'tor', 'to'],
             '4_sv': ['fredag', 'fre', 'fr'],
             '5_sv': ['lördag', 'lör', 'lö'],
             '6_sv': ['söndag', 'sön', 'sö'],
