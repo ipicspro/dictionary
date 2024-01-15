@@ -453,6 +453,8 @@ class check_in_dict():
             'an': ['ä'],
             'p': ['p'],
             'n': ['n', 'nt'],
+            'fi': ['fi'],
+            'ax': ['ax'],
         }
 
         diet_classes_fi = { 
@@ -481,6 +483,8 @@ class check_in_dict():
             'hth': ['luomua', 'luomu'],  # health
             'imt': ['reilun kaupan tuotteita', 'reilun tuotteita'], # important notice, honest work conditions
             'w': ['vehnä', 'wheat'], 
+            'fi': ['finnish', 'suomi'], 
+            'ax': ['aland'], 
             '**': ['ruoka ei sisällä sianlihaa'],
         }
         diet_classes_en = {
@@ -498,7 +502,9 @@ class check_in_dict():
             'vl': ['low lactose', 'low-lactose'], 
             'so': ['soija', 'soija and wheat', 'soy'], 
             'hth': ['healthy'],
-            'w': ['wheat'], 
+            'w': ['wheat'],
+            'fi': ['finnish', 'suomi'], 
+            'ax': ['aland'], 
             '**': ['pork free'],
         }
         diet_classes_sv = {
@@ -534,6 +540,9 @@ class check_in_dict():
             'hth': ['healthy'],
             'w': ['wheat'], 
             's': ['innehåller senap'],
+            'w': ['vehnä', 'wheat'], 
+            'fi': ['finnish', 'suomi'], 
+            'ax': ['aland'], 
             '**': ['pork free'],
         }
 
