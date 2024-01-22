@@ -237,6 +237,7 @@ class check_in_dict():
             '5_fi': {'nominative': 'lauantai', 'genetive': 'lauantain', 'innessive': 'lauantaissa'},
             '6_fi': {'nominative': 'sunnuntai', 'genetive': 'sunnuntain', 'innessive': 'sunnuntaissa'},
         }
+        
         self.weekdays_full = {
             '0_en': ['monday'],
             '1_en': ['tuesday'],
@@ -262,6 +263,13 @@ class check_in_dict():
             '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'lauantaisin', 'la'],
             '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin', 'su'],
         }
+        # self.weekdays_en = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
+        # self.weekdays_sv = ['måndag','tisdag','onsdag','torsdag','fredag','lördag','söndag'],
+        # self.weekdays_fi = ['maanantai', 'manantai', 'maananati', 'maananatai', 'maanantain', 'manantain', 'manantaina', 'maanantaina', 'maananatin', 'maananatina', 'maananatain', 'maananataina', 'tiistai', 'tistai', 'tiistain', 'tistain', 'tiistaina', 'tistaina', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'keskiviikon', 'keskiviikona', 'keskivikon', 'keskivikona', 'torstai', 'torstain', 'torstaina', 'perjantai', 'perjantain', 'perjantaina', 'lauantai', 'lauantain', 'lauantaina', 'sunnuntai', 'sununtai', 'sunnuntain'],
+        self.weekdays_en = [wd for i, r in self.weekdays_full.items() if 'en' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)],
+        self.weekdays_sv = [wd for i, r in self.weekdays_full.items() if 'sv' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)],
+        self.weekdays_fi = [wd for i, r in self.weekdays_full.items() if 'fi' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)],
+
         self.weekdays = {
             '0_en': ['monday', 'mon', 'mo'],
             '1_en': ['tuesday', 'tue', 'tu'],
@@ -840,9 +848,9 @@ class check_in_dict():
             
             # compare with today's date + from 1 ro 7 days further
             # 'date_signs': ['d.m', 'd.m.yyyy', 'm.d', 'yyyy.m.d', 'yyyy.d.m'],
-            'weekdays_en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
-            'weekdays_sv': ['måndag','tisdag','onsdag','torsdag','fredag','lördag','söndag'],
-            'weekdays_fi': ['maanantai', 'manantai', 'maananati', 'maananatai', 'maanantain', 'manantain', 'manantaina', 'maanantaina', 'maananatin', 'maananatina', 'maananatain', 'maananataina', 'tiistai', 'tistai', 'tiistain', 'tistain', 'tiistaina', 'tistaina', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'keskiviikon', 'keskiviikona', 'keskivikon', 'keskivikona', 'torstai', 'torstain', 'torstaina', 'perjantai', 'perjantain', 'perjantaina', 'lauantai', 'lauantain', 'lauantaina', 'sunnuntai', 'sununtai', 'sunnuntain'],
+            'weekdays_en': self.weekdays_en,
+            'weekdays_sv': self.weekdays_sv,
+            'weekdays_fi': self.weekdays_fi,
             'weekdays_open_en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
             'weekdays_open_sv': ['måndag','tisdag','onsdag','torsdag','fredag','lördag','söndag'],
             'weekdays_open_fi': ['maanantai', 'manantai', 'maananati', 'maananatai', 'maanantain', 'manantain', 'manantaina', 'maanantaina', 'maananatin', 'maananatina', 'maananatain', 'maananataina', 'tiistai', 'tistai', 'tiistain', 'tistain', 'tiistaina', 'tistaina', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'keskiviikon', 'keskiviikona', 'keskivikon', 'keskivikona', 'torstai', 'torstain', 'torstaina', 'perjantai', 'perjantain', 'perjantaina', 'lauantai', 'lauantain', 'lauantaina', 'sunnuntai', 'sununtai', 'sunnuntain'],
