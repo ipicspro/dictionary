@@ -266,8 +266,8 @@ class check_in_dict():
         # self.weekdays_en = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'],
         # self.weekdays_sv = ['måndag','tisdag','onsdag','torsdag','fredag','lördag','söndag'],
         # self.weekdays_fi = ['maanantai', 'manantai', 'maananati', 'maananatai', 'maanantain', 'manantain', 'manantaina', 'maanantaina', 'maananatin', 'maananatina', 'maananatain', 'maananataina', 'tiistai', 'tistai', 'tiistain', 'tistain', 'tiistaina', 'tistaina', 'keskiviikko', 'keskiviiko', 'keskivikko', 'keskiviko', 'keskiviikon', 'keskiviikona', 'keskivikon', 'keskivikona', 'torstai', 'torstain', 'torstaina', 'perjantai', 'perjantain', 'perjantaina', 'lauantai', 'lauantain', 'lauantaina', 'sunnuntai', 'sununtai', 'sunnuntain'],
-        self.weekdays_en = [wd for i, r in self.weekdays_full.items() if 'en' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)]
-        self.weekdays_sv = [wd for i, r in self.weekdays_full.items() if 'sv' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)]
+        self.weekdays_en = [wd for i, r in self.weekdays_full.items() if 'en' in i for wd in r]
+        self.weekdays_sv = [wd for i, r in self.weekdays_full.items() if 'sv' in i for wd in r]
         self.weekdays_fi = [wd for i, r in self.weekdays_full.items() if 'fi' in i for i_wd, wd in enumerate(r) if i_wd < len(wd)]
 
         self.weekdays = {
