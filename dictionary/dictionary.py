@@ -259,8 +259,8 @@ class check_in_dict():
             '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'ke'],
             '3_fi': ['torstai', 'torstain', 'torstaina', 'to'],
             '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'pe'],
-            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'la'],
-            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'su'],
+            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'lauantaisin', 'la'],
+            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin', 'su'],
         }
         self.weekdays = {
             '0_en': ['monday', 'mon', 'mo'],
@@ -284,16 +284,16 @@ class check_in_dict():
             '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'ke'],
             '3_fi': ['torstai', 'torstain', 'torstaina', 'to'],
             '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'pe'],
-            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'la'],
-            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'su'],
+            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'lauantaisin', 'la'],
+            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin', 'su'],
         }
         self.weekend = {
             '5_en': ['saturday'],
             '5_sv': ['lördag'],
-            '5_fi': ['saturday', 'lauantai', 'lauantain', 'lauantaina'],
+            '5_fi': ['saturday', 'lauantai', 'lauantain', 'lauantaina', 'lauantaisin'],
             '6_en': ['sunday'],
             '6_sv': ['söndag'],
-            '6_fi': ['sunday', 'sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina'],
+            '6_fi': ['sunday', 'sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin'],
         }
         self.weekdays_name_num = {
             'mo': 0,
