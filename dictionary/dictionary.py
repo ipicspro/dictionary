@@ -96,7 +96,7 @@ class check_in_dict():
             103: 'bruncher.se',
             130: 'bruncher.se event',
             121: 'bruncher.se leftovers',
-            104: 'afterwork.se',
+            104: 'afterworken.se',
             # 104: 'dinner',
             # 105: 'set lunch',
             106: 'drinks',
