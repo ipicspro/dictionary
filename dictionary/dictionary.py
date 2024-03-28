@@ -48,9 +48,10 @@ class check_in_dict():
             2: 'lunch',
             21: 'lunch leftovers',
             3: 'brunch',
+            4: 'afterwork',
             21: 'brunch leftovers',
             30: 'brunch event',
-            4: 'dinner',
+            # 4: 'dinner',
             5: 'set lunch',
             6: 'drinks',
 
@@ -60,9 +61,10 @@ class check_in_dict():
             102: 'lunch',
             121: 'lunch leftovers',
             103: 'brunch',
+            104: 'afterwork',
             121: 'brunch leftovers',
             130: 'brunch event',
-            104: 'dinner',
+            # 104: 'dinner',
             105: 'set lunch',
             106: 'drinks',
         }
@@ -80,6 +82,7 @@ class check_in_dict():
             3: 'brunssit.fi',
             21: 'brunssit.fi leftovers',
             30: 'brunssit.fi event',
+            4: 'afterwork.fi',
             # 4: 'dinner',
             # 5: 'set lunch',
             6: 'drinks',
@@ -93,6 +96,7 @@ class check_in_dict():
             103: 'bruncher.se',
             130: 'bruncher.se event',
             121: 'bruncher.se leftovers',
+            104: 'afterwork.se',
             # 104: 'dinner',
             # 105: 'set lunch',
             106: 'drinks',
@@ -105,11 +109,13 @@ class check_in_dict():
             'brf': 'breakfast',
             'lns': 'lunch',
             'brn': 'brunch|breakfast',
+            'afw': 'afterwork|after work',
 
             'srt': 'a la cart',
             'sbf': 'breakfast',
             'slh': 'lunch',
             'sbn': 'brunch|breakfast',
+            'saw': 'afterwork|after work',
         }
 
         # used to translate ptoject_name to menu_type code to work with sql
@@ -121,6 +127,7 @@ class check_in_dict():
             'lns': [2],
             'lns_lft': [21],  # leftovers
             'brn': [3],
+            'afw': [4],
             'brn_chr': [30],
             'brn_frd': [30],
             'brn_lft': [31],  # leftovers
@@ -131,6 +138,7 @@ class check_in_dict():
             'slh': [102],
             'slh_lft': [121],  # leftovers
             'sbn': [103],
+            'saw': [104],
             'sbn_chr': [130],
             'sbn_frd': [130],
             'sbn_lft': [131],  # leftovers
@@ -144,6 +152,7 @@ class check_in_dict():
             'lns': 'fi',
             'lns_lft': 'fi',
             'brn': 'fi',
+            'afw': 'fi',
             'brn_chr': 'fi',
             'brn_frd': 'fi',
             'brn_lft': 'fi',
@@ -155,6 +164,7 @@ class check_in_dict():
             'slh': 'sv',
             'slh_lft': 'sv',
             'sbn': 'sv',
+            'saw': 'sv',
             'sbn_chr': 'sv',
             'sbn_frd': 'sv',
             'sbn_lft': 'sv',
@@ -170,7 +180,8 @@ class check_in_dict():
             21: 'lounas-hävikkiruoka',
             3: 'brunssi',
             30: 'brunssi-tapahtuma',
-            4: 'illallinen',
+            4: 'afterwork',
+            # 4: 'illallinen',
             5: 'maistelumenu',
             6: 'juoma',
         }
@@ -184,7 +195,8 @@ class check_in_dict():
             3: 'brunch',
             21: 'brunch-leftovers',
             30: 'brunch-event',
-            4: 'dinner',
+            4: 'afterwork',
+            # 4: 'dinner',
             5: 'setlunch',
             6: 'drinks',
         }
@@ -196,7 +208,8 @@ class check_in_dict():
             1021: 'lunch-matsvinn',
             103: 'brunch',
             1030: 'brunch-event',
-            104: 'middag',
+            104: 'afterwork',
+            # 104: 'middag',
             105: 'setlunch',
             106: 'drycker',
         }
@@ -650,9 +663,9 @@ class check_in_dict():
             # 'menu_types_en': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
             # 'menu_types_sv': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
             # 'menu_types_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
-            'menu_types_en': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
-            'menu_types_sv': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
-            'menu_types_fi': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch'],
+            'menu_types_en': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch', 'afterwork'],
+            'menu_types_sv': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch', 'afterwork'],
+            'menu_types_fi': ['a la carte', 'breakfast', 'lunch', 'lunchsaturday', 'brunch', 'dinner', 'salatbar', 'set lunch', 'afterwork'],
             'a la carte_en': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'ala carte', 'menu'],
             'a la carte_sv': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'ala carte', 'meny'],
             'a la carte_fi': ['à la carte', 'á la carte', 'a la carte', 'la carte', 'ala carte', 'menu', 'ruokalista'],
@@ -668,6 +681,9 @@ class check_in_dict():
             'lunch_en': ['delibuffet', 'lunch', 'buffet'],
             'lunch_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'dagmeny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch'],
             'lunch_fi': ['arkilounas', 'lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasruokaa', 'lounasruoka', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'lounaspuffetti', 'lounaspuffet', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'buffet', 'puffetti', 'puffet', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto', 'kotiruokalounas', 'klubilounas', 'lounas viikolla'],  # 'jälkiruoka', 
+            'afterwork_en': ['afterwork',],
+            'afterwork_sv': ['afterwork',],
+            'afterwork_fi': ['afterwork',], 
             # 'lunch_sv': ['lunchbuffé', 'smörgåsbord'],
             'drinks_en': ['drinks', 'drink menu', ],
             'drinks_sv': ['drycker', 'dryckmeny', 'dryck', 'dryck meny', ],
@@ -697,6 +713,9 @@ class check_in_dict():
             'breakfast_lng_en': ['breakfast'],
             'breakfast_lng_sv': ['frukost', 'frukst'],
             'breakfast_lng_fi': ['amupalaa', 'amupala', 'aamupalo'],
+            'afterwork_lng_en': ['afterwork'],
+            'afterwork_lng_sv': ['afterwork'],
+            'afterwork_lng_fi': ['afterwork'],
             'lunch_lng_en': ['delibuffet', 'delhi buffet', 'lunch', 'buffet'],
             'lunch_lng_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'delibuffet', 'lunch', 'buffet', 'buffé', 'byffé', 'byffe', 'buffe', 'buffén', 'buffér', 'buffen', 'buffer', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'dagmeny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'salladsbuffé', 'salladsbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch'],
             'lunch_lng_fi': ['lounas tänään', 'avoinna arkisin', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasmenu', 'lounasta', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'delibuffet', 'delisalaatti', 'jälkiruoka', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'buffetti', 'bufetti', 'noutopöytä', 'seisova pöytä', 'keittolounas', 'keitto'],
@@ -734,6 +753,9 @@ class check_in_dict():
             'lunch_simple_en': ['lunch'],
             'lunch_simple_sv': ['lunchbuffé', 'lunchbuffe', 'smörgåsbord', 'lunch', 'lunchmeny', 'lunch meny', 'lunchmenyn', 'lunchmenyer', 'veckans meny', 'veckomeny', 'vecko meny', 'veckans', 'dagens lunch', 'dagens meny', 'dagmeny', 'lunchpizzor', 'husets special', 'asiatisk buffé', 'tisdag lunch', 'lunchbuffé', 'lunch rätter', 'lunchrätter', 'lunchratter', 'dagens rätter', 'dagens ratter', 'veckans kött', 'veckans fisk', 'veckans lunchmeny', 'veckans lunch meny', 'dagens rätt', 'dagens ratt', 'vegetarisk lunchalternativ', 'lunchalternativ', 'lunch-a\'la carte', 'lunch-a la carte', 'alacarte lunch', 'a la carte lunch', 'dagens lunchbuffé', 'dagens lunchbuffe', 'veckans soppa', 'dagens soppa', 'sopplunch', 'dagens husman', 'dagens vegan', 'fredags lunch', 'buffet', 'le-dejeuner', 'le_dejeuner', 'ledejeuner', 'le dejeuner'],
             'lunch_simple_fi': ['lounas tänään', 'lounas arkisin', 'lounas lista', 'lounaslista', 'lounasmenu', 'lounasta','lounaalla', 'lounasbuffet', 'lunasbuffet', 'lounasbufee', 'buffetlounaan', 'lounaan hinta', 'lounaan', 'lounas', 'arkisin', 'noutopöytä', 'seisova pöytä', 'keittolounas',],
+            'afterwork_simple_en': ['afterwork'],
+            'afterwork_simple_sv': ['afterwork'],
+            'afterwork_simple_fi': ['afterwork'],
             'set lunch_simple_en': ['menu du jour', 'lunch menu', 'lunch hour menu', 'set lunch menu', 'lunch menu (thurs-sat)', 'weekday lunch menu', 'sample set lunch', 'flexible lunch menu', 'sample lunch menu', 'chef\'s set lunch menu'],
             'set lunch_simple_sv': ['meny du jour', 'lunchmeny', 'lunch timmeny', 'set lunchmeny', 'lunchmeny (tors-lör)', 'weekday lunch meny', 'provuppsättning lunch', 'flexibel lunchmeny', 'exempel på lunchmeny', 'kockens uppsättning lunchmeny'],
             'set lunch_simple_fi': ['set lunch', 'set lounas', 'päivän annos'],
@@ -767,6 +789,9 @@ class check_in_dict():
             'offer_brunch_en': ['brunch'],
             'offer_brunch_sv': ['brunch'],
             'offer_brunch_fi': ['bistrobrunssi', 'brunssi', 'brunch'],
+            'offer_afterwork_en': ['afterwork'],
+            'offer_afterwork_sv': ['afterwork'],
+            'offer_afterwork_fi': ['afterwork'],
             'offer_salatbar_en': ['salat bar', 'salad buffet'],
             'offer_salatbar_sv': ['salat bar', 'sallad buffet', 'salladbuffé'],
             'offer_salatbar_fi': ['salaattibaari', 'salad buffet'],
@@ -964,22 +989,26 @@ class check_in_dict():
                 1: "No Breakfast {date0} - {date1}.",
                 2: "No Lunch {date0} - {date1}.",
                 3: "No Brunch {date0} - {date1}.",
+                4: "No Afterwork {date0} - {date1}.",
                 100: "No A la carte {date0} - {date1}.",
                 101: "No Breakfast {date0} - {date1}.",
                 102: "No Lunch {date0} - {date1}.",
                 103: "No Brunch {date0} - {date1}.",
+                104: "No Afterwork {date0} - {date1}.",
             },
             'closed_temp_sv': {
                 100: "Restaurang serverar inte a la carte från {date0} till {date1}.",
                 101: "Restaurang serverar inte frukost från {date0} till {date1}.",
                 102: "Restaurang serverar inte lunch från {date0} till {date1}.",
                 103: "Restaurang serverar inte brunch från {date0} till {date1}.",
+                104: "Restaurang serverar inte afterwork från {date0} till {date1}.",
             },
             'closed_temp_fi': {
                 0: "Ravintola on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
                 1: "Aamiainen on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
                 2: "Lounas on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
                 3: "Brunssi on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
+                4: "Afterwork on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
             },
 
             'greetings_en': ['hello', 'welcome'],
