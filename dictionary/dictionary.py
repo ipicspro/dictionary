@@ -300,14 +300,22 @@ class check_in_dict():
             '5_sv': ['lördag', 'lör', 'lö'],
             '6_sv': ['söndag', 'sön', 'sö'],
             
-            '0_fi': ['maanantai', 'maanantain', 'maanantaina', 'manantaina', 'manantai', 'maananati', 'maananatai', 'maananatain', 'maananataina', 'maanantaisin', 'ma'],
-            '1_fi': ['tiistai', 'tiistain', 'tiistaina', 'tistai', 'tistain', 'tistaina', 'tiistaisin', 'ti'],
-            '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'keskiviikkoisin', 'ke'],
-            '3_fi': ['torstai', 'torstain', 'torstaina', 'torstaisin', 'to'],
-            '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'perjantaisin', 'pe'],
-            '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'lauantaisin', 'la'],
-            '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin', 'su'],
+            # '0_fi': ['maanantai', 'maanantain', 'maanantaina', 'manantaina', 'manantai', 'maananati', 'maananatai', 'maananatain', 'maananataina', 'maanantaisin', 'ma'],
+            # '1_fi': ['tiistai', 'tiistain', 'tiistaina', 'tistai', 'tistain', 'tistaina', 'tiistaisin', 'ti'],
+            # '2_fi': ['keskiviikko', 'keskiviikkon', 'keskiviikkona', 'keskiviikon', 'keskiviikona', 'keskiviiko', 'keskiviikon', 'keskiviikona', 'keskivikko', 'keskivikkon', 'keskivikkona', 'keskiviko', 'keskivikon', 'keskivikona', 'keskiviikkoisin', 'ke'],
+            # '3_fi': ['torstai', 'torstain', 'torstaina', 'torstaisin', 'to'],
+            # '4_fi': ['perjantai', 'perjantain', 'perjantaina', 'perjantaisin', 'pe'],
+            # '5_fi': ['lauantai', 'lauantain', 'lauantaina', 'lauantaisin', 'la'],
+            # '6_fi': ['sunnuntai', 'sunnuntain', 'sunnuntaina', 'sununtai', 'sununtain', 'sununtaina', 'sununtaisin', 'su'],
         }
+        self.weekdays['0_fi'] = self.weekdays_full['0_fi']
+        self.weekdays['1_fi'] = self.weekdays_full['1_fi']
+        self.weekdays['2_fi'] = self.weekdays_full['2_fi']
+        self.weekdays['3_fi'] = self.weekdays_full['3_fi']
+        self.weekdays['4_fi'] = self.weekdays_full['4_fi']
+        self.weekdays['5_fi'] = self.weekdays_full['5_fi']
+        self.weekdays['6_fi'] = self.weekdays_full['6_fi']
+        
         self.weekend = {
             '5_en': ['saturday'],
             '5_sv': ['lördag'],
