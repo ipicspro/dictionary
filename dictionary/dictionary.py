@@ -985,7 +985,7 @@ class check_in_dict():
             'closed_to_txt_fi': ['suljettu'],
             # temp closed
             'closed_en': ['are closed', 'closed', 'private event', 'summer break', 'back in business', 'coming soon',],
-            'closed_sv': ['är stängda', 'stängt', 'stängd', 'privat evenemang', 'privatevenemang', 'sommaruppehållet', 'tillbaka i affärer', 'kommer snart', 'coming soon',],
+            'closed_sv': ['är stängda', 'stängt', 'stängd', 'lunchstängt', 'privat evenemang', 'privatevenemang', 'sommaruppehållet', 'tillbaka i affärer', 'kommer snart', 'coming soon',],
             'closed_fi': ['ei lounasta', 'on suljettu', 'olemme suljettuna', 'suljettu', 'yksityistilaisuus', 'are closed', 'closed'],
             # permanent closed
             'closed_permanent_en': ['has permanently closed', 'permanently closed', 'closed permanently', 'closed for good', 'is closing its doors', 'shut its doors', 'decided to close the doors for good', 'decided to close the doors', 'business is closing its doors', 'business is closing'],
