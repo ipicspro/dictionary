@@ -1009,7 +1009,7 @@ class check_in_dict():
                 101: "Restaurang serverar inte frukost från {date0} till {date1}.",
                 102: "Restaurang serverar inte lunch från {date0} till {date1}.",
                 103: "Restaurang serverar inte brunch från {date0} till {date1}.",
-                104: "Restaurang serverar inte afterwork från {date0} till {date1}.",
+                104: "Restaurang har inte afterwork från {date0} till {date1}.",
             },
             'closed_temp_fi': {
                 0: "Ravintola on tauolla {date0} - {date1}.",  # \nEi ruokalistaa saatavilla.
