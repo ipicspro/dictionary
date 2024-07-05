@@ -397,16 +397,17 @@ class check_in_dict():
             'sa': 'sa',
             'su': 'su',
         }
-        self.weekdays_parse_db_sv = {
-            'mo': 'må',
-            'tu': 'ti',
-            'we': 'on',
-            'th': 'to',
-            'fr': 'fr',
-            'sa': 'lö',
-            'su': 'sö',
-        }
+        # self.weekdays_parse_db_sv = {
+        #     'mo': 'må',
+        #     'tu': 'ti',
+        #     'we': 'on',
+        #     'th': 'to',
+        #     'fr': 'fr',
+        #     'sa': 'lö',
+        #     'su': 'sö',
+        # }
         self.weekdays_parse_db_fi = self.weekdays_parse_fi
+        self.weekdays_parse_db_sv = self.weekdays_parse_sv
 
 
         # use this in duplicated cases in 'words' (for different languages are same values)
