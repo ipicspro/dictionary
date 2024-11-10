@@ -626,6 +626,76 @@ class check_in_dict():
         errors_common = ['robot', 'antispam', 'imunify 360', 'imunify360', 'blocked access', 'unusual activity', 'socks version', 'protocol error', 'protocol error', 'failed loading page', 'network error', 'could not find this page', "that page can't be found", "page can't be found", 'page is not found', 'page not found', 'not found', 'not-found', 'not_found', 'notfound', 'page404', 'page-404', 'page_404', 'page 404', 'anti-crawler', 'anti crawler', 'crawler protection', 'cleantalk', 'error establishing a database connection', 'error establishing', 'database connection', 'captcha', 'human and bots', 'forbidden', 'nginx', 'be banned from the site', 'that page can\’t be found', 'that page can\'t be found', 'page can\’t be found', 'page can\'t be found', 'nothing was found', 'try to search for something else', 'JavaScript', ]
         # 404 - sidan kunde inte hittas
 
+        events_chr = [
+            "cristmas",
+            "joululounas",
+            "joulubrunssi",
+            "julbord",
+        ]
+        events_nyr = [
+            "uudenvuodenbrunssi",
+            "nyår",
+        ]
+        events_frd = [
+            "ystävänpäivä",
+            "alla-hjärtans-dag",
+        ]
+        events_est = [
+            "pääsiäisbrunssi",
+            "påsk",
+        ]
+        events_mth = [
+            "mother's day",
+            "äitienpäiväbrunssi",
+            "mors-dag-brunch",
+        ]
+        events_vpu = [
+            "vappubrunssi",
+            "vappulounas",
+        ]
+        events_val = [
+            "valborg-första-maj",
+        ]
+        events_jhs = [
+            "juhannusbrunssi",
+        ]
+        events_ind = [
+            "itsenäisyyspäiväbrunssi",
+        ]
+        events_fth = [
+            "father's day",
+            "isänpäivabrunssi",
+            "fars-dag-brunch",
+        ]
+        events_msm = [
+            "midsommarlunch",
+        ]
+        events_nld = [
+            "nationaldagen",
+        ]
+        events_gmd = [
+            "gåsamiddag",
+        ]
+        events_khf = [
+            "kristi-himmelsfärdsdag",
+        ]
+
+        events_common = []
+        events_common.extend(events_chr)
+        events_common.extend(events_nyr)
+        events_common.extend(events_frd)
+        events_common.extend(events_est)
+        events_common.extend(events_mth)
+        events_common.extend(events_vpu)
+        events_common.extend(events_val)
+        events_common.extend(events_jhs)
+        events_common.extend(events_ind)
+        events_common.extend(events_fth)
+        events_common.extend(events_msm)
+        events_common.extend(events_nld)
+        events_common.extend(events_gmd)
+        events_common.extend(events_khf)
+
         punctuation = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
         a = 0  # test stop
 
@@ -1031,6 +1101,10 @@ class check_in_dict():
             'address_en': ['street', 'floor', 'building', 'city'],
             'address_sv': ['gata', 'golv', 'byggnad', 'stad'],
             'address_fi': ['katu', 'kerros', 'talo', 'kaupunki'],
+
+            'events_en': events_common,
+            'events_sv': events_common,
+            'events_fi': events_common,
 
             # We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.
             # \nFailed loading page (Socket operation timed out)\nhttp://www.kujabarbistro.fi/fi/lunch-menu\nNetwork error #4\n
