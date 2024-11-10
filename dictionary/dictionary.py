@@ -629,16 +629,22 @@ class check_in_dict():
         events_chr = [
             "cristmas",
             "joululounas",
+            "joulu lounas",
             "joulubrunssi",
+            "joulu brunssi",
             "julbord",
         ]
         events_nyr = [
             "uudenvuodenbrunssi",
+            "uudenvuoden brunssi",
+            "uudsi vuosi brunssi",
             "nyår",
         ]
         events_frd = [
             "ystävänpäivä",
-            "alla-hjärtans-dag",
+            "allahjärtansdag",
+            "allahjärtans dag",
+            "alla hjärtans dag",
         ]
         events_est = [
             "pääsiäisbrunssi",
@@ -646,38 +652,77 @@ class check_in_dict():
         ]
         events_mth = [
             "mother's day",
+            "mothers day",
+            "mother day",
             "äitienpäiväbrunssi",
-            "mors-dag-brunch",
+            "morsdagbrunch",
+            "morsdag brunch",
+            "mors dag brunch",
         ]
         events_vpu = [
             "vappubrunssi",
+            "vappu brunssi",
             "vappulounas",
+            "vappu lounas",
         ]
         events_val = [
-            "valborg-första-maj",
+            "valborgförstamaj",
+            "valborg förstamaj",
+            "valborg första maj",
+            "valborgförsta maj",
         ]
         events_jhs = [
             "juhannusbrunssi",
+            "juhannus brunssi",
         ]
         events_ind = [
             "itsenäisyyspäiväbrunssi",
+            "itsenäisyys päiväbrunssi",
+            "itsenäisyys päivä brunssi",
+            "itsenäisyyspäivä brunssi",
         ]
         events_fth = [
             "father's day",
+            "fathers day",
+            "father day",
             "isänpäivabrunssi",
-            "fars-dag-brunch",
+            "isänpäiva brunssi",
+            "isän päiva brunssi",
+            "isä päiva brunssi",
+            "isäpäiva brunssi",
+            "isäpäivabrunssi",
+            "fars dag brunch",
+            "farsdag brunch",
+            "farsdagbrunch",
         ]
         events_msm = [
             "midsommarlunch",
+            "midsommar lunch",
+            "mid sommar lunch",
         ]
         events_nld = [
             "nationaldagen",
+            "national dagen",
+            "national dag",
+            "nationaldag",
+            "national day",
         ]
         events_gmd = [
+            "goose midday",
+            "goose mid day",
+            "goosemidday",
             "gåsamiddag",
+            "gåsamid dag",
+            "gåsa mid dag",
+            "gåsa mid",
         ]
         events_khf = [
-            "kristi-himmelsfärdsdag",
+            "kristihimmelsfärdsdag",
+            "kristi himmelsfärdsdag",
+            "kristi himmels färdsdag",
+            "kristi himmels färds dag",
+            "kristihimmels färds dag",
+            "kristihimmels färdsdag",
         ]
 
         events_common = []
