@@ -100,7 +100,7 @@ class check_in_dict():
             104: 'afterworken.se',
             140: 'afterworken event',
             # 104: 'dinner',
-            105: 'mycatering.fi',
+            105: 'mycatering.se',
             106: 'drinks',
         }
         self.menu_type_network = {v:k for k,v in self.menu_type_network_inv.items()}
